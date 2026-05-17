@@ -6,61 +6,90 @@
 <title>DIGI CODE</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif
+}
+
+body{
 background:
 radial-gradient(circle at top,#5a3900,#000 60%);
 color:white;
-text-align:center;
-padding:30px;
+padding:25px;
+padding-bottom:60px;
 }
 
-h1{
+.logo{
 font-size:52px;
+font-weight:900;
 color:#ffc400;
-margin-top:50px;
+text-align:center;
+margin-top:35px;
 text-shadow:0 0 25px #ffc400;
 }
 
-p{
+.desc{
+text-align:center;
 color:#ddd;
+margin:18px 0 30px;
 font-size:18px;
-margin-bottom:30px;
+line-height:1.5;
 }
 
 .btn{
-display:inline-block;
+display:block;
+max-width:280px;
+margin:0 auto 40px;
 background:#ffc400;
 color:#111;
-padding:15px 30px;
+padding:16px;
 border-radius:40px;
-font-weight:bold;
+text-align:center;
 text-decoration:none;
-margin-bottom:40px;
+font-weight:900;
 box-shadow:0 0 25px #ffc40088;
+}
+
+.section{
+margin-top:30px;
+}
+
+.section h2{
+margin-bottom:15px;
+font-size:30px;
 }
 
 .products{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:15px;
-max-width:500px;
-margin:auto;
 }
 
 .card{
-background:#151515;
+background:#141414;
 border:1px solid #333;
-border-radius:20px;
-padding:20px;
+border-radius:22px;
+padding:18px;
+box-shadow:0 0 18px #000;
+}
+
+.card h3{
+font-size:22px;
+margin-bottom:8px;
+}
+
+.card p{
+color:#aaa;
+font-size:14px;
 }
 
 .price{
 color:#ffc400;
-font-size:24px;
-font-weight:bold;
-margin:12px 0;
+font-size:25px;
+font-weight:900;
+margin:14px 0;
 }
 
 .buy{
@@ -69,36 +98,88 @@ background:#ffc400;
 color:#111;
 padding:12px;
 border-radius:14px;
+text-align:center;
 text-decoration:none;
-font-weight:bold;
+font-weight:900;
+}
+
+.note{
+margin-top:28px;
+background:#111;
+border:1px solid #333;
+border-radius:22px;
+padding:20px;
+}
+
+.note h3{
+color:#ffc400;
+margin-bottom:10px;
+font-size:24px;
+}
+
+.note p{
+color:#bbb;
+line-height:1.6;
 }
 </style>
 </head>
 
 <body>
 
-<h1>DIGI CODE</h1>
+<div class="logo">
+DIGI CODE
+</div>
 
-<p>PUBG UC • Valorant VP • Robux Market</p>
+<div class="desc">
+PUBG UC • Valorant VP • Robux • Dijital Kod Market
+</div>
 
 <a class="btn" href="#">
 WhatsApp Sipariş
 </a>
 
+<div class="section">
+<h2>UC Paketleri</h2>
+
 <div class="products">
 
 <div class="card">
-<h2>325 UC</h2>
+<h3>325 UC</h3>
+<p>PUBG Mobile hızlı yükleme</p>
 <div class="price">₺149</div>
 <a class="buy" href="#">Hemen Al</a>
 </div>
 
 <div class="card">
-<h2>660 UC</h2>
+<h3>660 UC</h3>
+<p>Popüler UC paketi</p>
 <div class="price">₺299</div>
 <a class="buy" href="#">Hemen Al</a>
 </div>
 
+<div class="card">
+<h3>1800 UC</h3>
+<p>Premium paket</p>
+<div class="price">₺699</div>
+<a class="buy" href="#">Hemen Al</a>
+</div>
+
+<div class="card">
+<h3>3850 UC</h3>
+<p>En çok satan</p>
+<div class="price">₺1399</div>
+<a class="buy" href="#">Hemen Al</a>
+</div>
+
+</div>
+</div>
+
+<div class="note">
+<h3>Premium Dijital Market</h3>
+
+<p>
+UC, VP, Robux ve dijital kod siparişlerinizi hızlı ve güvenli şekilde teslim ediyoruz.
+</p>
 </div>
 
 </body>
