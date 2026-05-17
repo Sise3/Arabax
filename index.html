@@ -4,6 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIGI CODE</title>
+<style>
+body{
+margin:0;
+background:radial-gradient(circle at top,#4a2f00,#000 60%);
+color:white;
+font-family:Arial,sans-serif;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+.box{padding:20px;max-width:360px}
+h1{font-size:42px;color:#ffc400;margin:0 0 12px;text-shadow:0 0 18px #ffc400}
+p{font-size:15px;color:#ddd;line-height:1.5}
+.btn{display:block;background:#ffc400;color:#111;padding:14px;border-radius:30px;text-decoration:none;font-weight:bold;margin-top:22px}
+.coin{position:absolute;width:45px;height:45px;border-radius:50%;background:radial-gradient(circle,#fff2a0,#ffc400,#8a5600);box-shadow:0 0 20px #ffc400;animation:float 4s infinite}
+.c1{top:12%;left:12%}.c2{top:20%;right:12%;animation-delay:1s}.c3{bottom:18%;left:18%;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-18px)}}
+</style>
 </head>
-<body style="margin:0;background:#000;"></body>
+<body>
+
+<div class="coin c1"></div>
+<div class="coin c2"></div>
+<div class="coin c3"></div>
+
+<div class="box">
+<h1>DIGI CODE</h1>
+<p>Jeton • UC • VP • Robux Market<br>Hızlı dijital teslimat</p>
+<a class="btn" href="#">Giriş Yap</a>
+</div>
+
+</body>
 </html>
