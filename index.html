@@ -3,326 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARABAX Premium</title>
-
+<title>Digital Store</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#050505;
-color:white;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:#000;
-border-bottom:1px solid #222;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.logo{
-font-size:38px;
-font-weight:900;
-color:#ffb300;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 12px;
-font-size:15px;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#050507;color:white;overflow-x:hidden}
 .hero{
-min-height:92vh;
+min-height:100vh;
+background:radial-gradient(circle at top,#302000,#050507 55%);
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:60px;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-}
-
-.left{
-max-width:550px;
-}
-
-.left h1{
-font-size:68px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.gold{
-color:#ffb300;
-}
-
-.left p{
-font-size:20px;
-color:#ddd;
-line-height:1.6;
-margin-bottom:30px;
-}
-
-.btns{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:16px 28px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-}
-
-.btn1{
-background:#ffb300;
-color:black;
-}
-
-.btn2{
-border:2px solid #ffb300;
-color:#ffb300;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
 padding:35px;
 }
-
-.stat{
-background:#111;
-border:1px solid #222;
-padding:25px;
-border-radius:18px;
-text-align:center;
-}
-
-.stat h2{
-color:#ffb300;
-font-size:34px;
-margin-bottom:10px;
-}
-
-.section-title{
-padding:20px 35px;
-font-size:32px;
+.text{max-width:520px}
+.logo{color:#ffc400;font-size:28px;font-weight:900;margin-bottom:35px}
+h1{font-size:58px;line-height:1.05;margin-bottom:20px}
+h1 span{color:#ffc400}
+p{color:#ddd;font-size:18px;line-height:1.6;margin-bottom:30px}
+.btn{
+display:inline-block;
+background:#ffc400;
+color:#111;
+padding:16px 30px;
+border-radius:40px;
 font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 25px #ffc40066;
 }
-
-.cars{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:0 35px 40px;
-}
-
-.card{
-background:#111;
-border-radius:20px;
-overflow:hidden;
-border:1px solid #222;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:100%;
-height:190px;
-object-fit:cover;
-}
-
-.card-content{
-padding:18px;
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.price{
-color:#ffb300;
-font-size:28px;
-font-weight:bold;
-margin-top:12px;
-}
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25d366;
-width:70px;
-height:70px;
-border-radius:50%;
+.phones{
 display:flex;
 align-items:center;
-justify-content:center;
-font-size:34px;
-text-decoration:none;
-color:white;
-box-shadow:0 0 20px rgba(0,0,0,.5);
+gap:18px;
 }
-
-footer{
-background:#000;
-padding:30px;
-text-align:center;
-color:#aaa;
-margin-top:30px;
-}
-
-@media(max-width:900px){
-
-header{
-padding:15px;
-flex-direction:column;
-gap:15px;
-}
-
-.hero{
-padding:25px;
-text-align:center;
-justify-content:center;
-}
-
-.left h1{
-font-size:48px;
-}
-
-.btns{
-justify-content:center;
-}
-
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo">ARABAX</div>
-
-<nav>
-<a href="#">Anasayfa</a>
-<a href="#">İlanlar</a>
-<a href="#">İhaleler</a>
-<a href="#">Galeri</a>
-<a href="#">İletişim</a>
-</nav>
-</header>
-
-<section class="hero">
-
-<div class="left">
-<h1>
-DOĞRU ARAÇ,<br>
-<span class="gold">DOĞRU ADRES.</span>
-</h1>
-
-<p>
-Arabax ile güvenli, hızlı ve premium araç alım satım deneyimi.
-</p>
-
-<div class="btns">
-<a href="#" class="btn btn1">Araçları İncele</a>
-<a href="#" class="btn btn2">İlan Ver</a>
-</div>
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="stat">
-<h2>1.248</h2>
-<p>Aktif İlan</p>
-</div>
-
-<div class="stat">
-<h2>23</h2>
-<p>Canlı İhale</p>
-</div>
-
-<div class="stat">
-<h2>4.752</h2>
-<p>Kayıtlı Üye</p>
-</div>
-
-<div class="stat">
-<h2>78.542</h2>
-<p>Aylık Ziyaret</p>
-</div>
-
-</section>
-
-<div class="section-title">
-Öne Çıkan Araçlar
-</div>
-
-<section class="cars">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200">
-<div class="card-content">
-<h3>Mercedes C200 AMG</h3>
-<p>2021 • Otomatik • Dizel</p>
-<div class="price">2.350.000 ₺</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200">
-<div class="card-content">
-<h3>BMW 3 Serisi</h3>
-<p>2020 • M Sport • Benzin</p>
-<div class="price">1.650.000 ₺</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200">
-<div class="card-content">
-<h3>Audi A6 Quattro</h3>
-<p>2022 • Premium • Dizel</p>
-<div class="price">2.250.000 ₺</div>
-</div>
-</div>
-
-</section>
-
-<a class="whatsapp" href="#">
-☎
-</a>
-
-<footer>
-© 2026 ARABAX Premium Araç Platformu
-</footer>
-
-</body>
-</html>
+.phone{
+width:185px;
+height:380px;
+background:#111;
+border:3px solid #333;
+border-radius:32px;
+padding:
