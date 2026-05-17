@@ -1,55 +1,80 @@
-<section style="padding:16px">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGI COIN</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#050505;color:white;font-family:Arial,sans-serif;padding-bottom:80px}
+header{background:#0f0f12;padding:16px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:9}
+.logo{font-size:24px;font-weight:900;color:#f8c400}
+.search{flex:1;background:#202026;border-radius:30px;padding:14px;color:#999}
+.wrap{padding:16px}
+.hero{height:300px;border-radius:28px;background:radial-gradient(circle at top,#6b4300,#080808 65%);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;position:relative;overflow:hidden}
+.hero h1{font-size:44px;margin:0;color:#f8c400;text-shadow:0 0 30px #f8c400}
+.hero p{color:#ddd;font-size:16px}
+.coin{position:absolute;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle,#fff4a0,#f8c400,#8a5a00);box-shadow:0 0 25px #f8c400;animation:float 4s infinite}
+.c1{top:25px;left:25px}.c2{top:50px;right:30px;animation-delay:1s}.c3{bottom:30px;left:45px;animation-delay:2s}.c4{bottom:40px;right:35px;animation-delay:3s}
+@keyframes float{50%{transform:translateY(-22px)}}
+.title{font-size:26px;margin:26px 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#15151a;border:1px solid #2d2d35;border-radius:22px;overflow:hidden}
+.pic{height:120px;background:linear-gradient(135deg,#332000,#111);display:flex;align-items:center;justify-content:center;font-size:42px}
+.info{padding:15px}
+.info h3{margin:0 0 6px}
+.info p{color:#aaa;font-size:13px}
+.price{color:#f8c400;font-size:25px;font-weight:900;margin:12px 0}
+.btn{display:block;background:#f8c400;color:#111;text-align:center;padding:13px;border-radius:14px;text-decoration:none;font-weight:900}
+.note{margin-top:22px;background:#111;border:1px solid #333;border-radius:22px;padding:18px;color:#ccc;line-height:1.5}
+.whatsapp{position:fixed;right:18px;bottom:90px;background:#25d366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;font-size:32px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#101014;border-top:1px solid #333;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 0}
+.bottom a{text-align:center;color:white;text-decoration:none;font-size:12px}
+.bottom div{font-size:23px}
+</style>
+</head>
+<body>
 
-<h2 style="font-size:28px;margin:14px 0 18px">
-🎮 Popüler Oyunlar
-</h2>
+<header>
+<div class="logo">DIGI COIN</div>
+<div class="search">Jeton ara...</div>
+</header>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+<div class="wrap">
 
-<div style="background:#17171d;border:1px solid #333;border-radius:22px;overflow:hidden">
-<div style="height:140px;background:url('https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=1200&auto=format&fit=crop') center/cover"></div>
-<div style="padding:16px">
-<h3>PUBG Mobile</h3>
-<p style="color:#aaa">UC yükleme ve hesap ürünleri</p>
+<section class="hero">
+<div class="coin c1"></div><div class="coin c2"></div><div class="coin c3"></div><div class="coin c4"></div>
+<div>
+<h1>DİJİTAL JETON MARKET</h1>
+<p>UC • VP • Robux • Oyun Parası • Hızlı Teslimat</p>
+<a class="btn" href="https://wa.me/905000000000">WhatsApp Sipariş</a>
 </div>
-</div>
-
-<div style="background:#17171d;border:1px solid #333;border-radius:22px;overflow:hidden">
-<div style="height:140px;background:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop') center/cover"></div>
-<div style="padding:16px">
-<h3>Valorant</h3>
-<p style="color:#aaa">VP ve dijital içerikler</p>
-</div>
-</div>
-
-<div style="background:#17171d;border:1px solid #333;border-radius:22px;overflow:hidden">
-<div style="height:140px;background:url('https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=1200&auto=format&fit=crop') center/cover"></div>
-<div style="padding:16px">
-<h3>Roblox</h3>
-<p style="color:#aaa">Robux market sistemi</p>
-</div>
-</div>
-
-<div style="background:#17171d;border:1px solid #333;border-radius:22px;overflow:hidden">
-<div style="height:140px;background:url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop') center/cover"></div>
-<div style="padding:16px">
-<h3>Steam</h3>
-<p style="color:#aaa">Steam cüzdan kodları</p>
-</div>
-</div>
-
-</div>
-
-<div style="margin-top:28px;padding:22px;background:#111;border:1px solid #333;border-radius:24px">
-
-<h2 style="color:#ffc400;font-size:30px;margin-bottom:12px">
-💎 Oyuncuların Dijital Pazarı
-</h2>
-
-<p style="color:#bbb;line-height:1.7">
-Türkiye'nin premium jeton market deneyimi. Hızlı teslimat, güvenli sipariş ve oyuncular için özel fiyatlar.
-</p>
-
-</div>
-
 </section>
+
+<h2 class="title">Popüler Jetonlar</h2>
+
+<div class="grid">
+<div class="card"><div class="pic">🪙</div><div class="info"><h3>PUBG UC</h3><p>Hızlı yükleme</p><div class="price">₺149</div><a class="btn" href="#">Hemen Al</a></div></div>
+<div class="card"><div class="pic">💎</div><div class="info"><h3>Valorant VP</h3><p>Dijital teslimat</p><div class="price">₺250</div><a class="btn" href="#">Hemen Al</a></div></div>
+<div class="card"><div class="pic">🧊</div><div class="info"><h3>Robux</h3><p>Roblox jetonu</p><div class="price">₺120</div><a class="btn" href="#">Hemen Al</a></div></div>
+<div class="card"><div class="pic">⚡</div><div class="info"><h3>Google Play</h3><p>Kod teslimatı</p><div class="price">₺100</div><a class="btn" href="#">Hemen Al</a></div></div>
+</div>
+
+<div class="note">
+<b style="color:#f8c400">Güvenli Dijital Teslimat</b><br><br>
+Siparişler WhatsApp üzerinden alınır. Ödeme sonrası jeton, kod veya yükleme bilgisi hızlıca teslim edilir.
+</div>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/905000000000">☎</a>
+
+<div class="bottom">
+<a href="#"><div>🏠</div>Ana Sayfa</a>
+<a href="#"><div>🪙</div>Jetonlar</a>
+<a href="#"><div>🛒</div>Sepet</a>
+<a href="#"><div>💬</div>Destek</a>
+</div>
+
+</body>
+</html>
