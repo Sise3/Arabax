@@ -1,43 +1,92 @@
-<section style="padding:30px 20px;background:#0a0a0a;color:white">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGI CODE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0f;color:white;font-family:Arial,sans-serif;padding-bottom:80px}
+.header{padding:16px;display:flex;gap:12px;align-items:center;background:#15151b}
+.logo{color:#ffc400;font-size:24px;font-weight:900}
+.search{flex:1;background:#24242b;border-radius:30px;padding:14px;color:#aaa}
+.wrap{padding:16px}
+.hero{height:260px;border-radius:26px;background:radial-gradient(circle at top,#704600,#111 60%);padding:25px;display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:0 0 30px #ffc40033}
+.hero h1{font-size:42px;margin:0;color:#ffc400;text-shadow:0 0 25px #ffc400}
+.hero p{color:#ddd;font-size:16px}
+.btn{display:block;background:#ffc400;color:#111;text-align:center;padding:14px;border-radius:16px;text-decoration:none;font-weight:900;margin-top:12px}
+.title{font-size:26px;margin:25px 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#17171d;border:1px solid #333;border-radius:22px;padding:18px}
+.card h3{margin:0 0 8px}
+.card p{color:#aaa;font-size:14px}
+.price{color:#ffc400;font-size:25px;font-weight:900;margin:12px 0}
+.info{background:#14141a;border:1px solid #333;border-radius:22px;padding:18px;margin-top:22px;color:#ccc;line-height:1.5}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#111;border-top:1px solid #333;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 0}
+.bottom a{text-align:center;color:white;text-decoration:none;font-size:12px}
+.bottom div{font-size:24px}
+</style>
+</head>
+<body>
 
-<h2 style="font-size:34px;margin-bottom:20px;color:#ffc400">
-Popüler UC Paketleri
-</h2>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
-
-<div style="background:#151515;border:1px solid #333;border-radius:20px;padding:18px">
-<h3>325 UC</h3>
-<p style="color:#aaa">PUBG Mobile yükleme</p>
-<div style="color:#ffc400;font-size:28px;font-weight:bold;margin:12px 0">
-₺149
-</div>
-<a href="#" style="display:block;background:#ffc400;color:#111;text-align:center;padding:12px;border-radius:12px;text-decoration:none;font-weight:bold">
-Hemen Al
-</a>
-</div>
-
-<div style="background:#151515;border:1px solid #333;border-radius:20px;padding:18px">
-<h3>660 UC</h3>
-<p style="color:#aaa">En çok satan paket</p>
-<div style="color:#ffc400;font-size:28px;font-weight:bold;margin:12px 0">
-₺299
-</div>
-<a href="#" style="display:block;background:#ffc400;color:#111;text-align:center;padding:12px;border-radius:12px;text-decoration:none;font-weight:bold">
-Hemen Al
-</a>
-</div>
-
-</div>
-
-<div style="margin-top:28px;background:#111;padding:20px;border-radius:20px;border:1px solid #333">
-<h3 style="color:#ffc400;margin-bottom:10px">
-⚡ Hızlı Dijital Teslimat
-</h3>
-
-<p style="color:#bbb;line-height:1.6">
-Siparişler WhatsApp üzerinden hızlı şekilde teslim edilir.
-</p>
+<div class="header">
+  <div class="logo">DIGI CODE</div>
+  <div class="search">Ürün ara...</div>
 </div>
 
-</section>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>JETON MARKET</h1>
+    <p>PUBG UC • Valorant VP • Robux • Dijital Kod</p>
+    <a class="btn" href="https://wa.me/905000000000">WhatsApp Sipariş</a>
+  </div>
+
+  <h2 class="title">UC Paketleri</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>325 UC</h3>
+      <p>PUBG Mobile hızlı yükleme</p>
+      <div class="price">₺149</div>
+      <a class="btn" href="#">Hemen Al</a>
+    </div>
+
+    <div class="card">
+      <h3>660 UC</h3>
+      <p>Popüler paket</p>
+      <div class="price">₺299</div>
+      <a class="btn" href="#">Hemen Al</a>
+    </div>
+
+    <div class="card">
+      <h3>Valorant VP</h3>
+      <p>Dijital teslimat</p>
+      <div class="price">₺250</div>
+      <a class="btn" href="#">Hemen Al</a>
+    </div>
+
+    <div class="card">
+      <h3>Robux</h3>
+      <p>Hızlı sipariş</p>
+      <div class="price">₺120</div>
+      <a class="btn" href="#">Hemen Al</a>
+    </div>
+  </div>
+
+  <div class="info">
+    <b style="color:#ffc400">Güvenli Dijital Teslimat</b><br><br>
+    Siparişler WhatsApp üzerinden alınır. Ödeme sonrası dijital kod veya yükleme bilgisi hızlıca teslim edilir.
+  </div>
+
+</div>
+
+<div class="bottom">
+  <a href="#"><div>🏠</div>Ana Sayfa</a>
+  <a href="#"><div>🎮</div>Ürünler</a>
+  <a href="#"><div>🛒</div>Sepet</a>
+  <a href="#"><div>💬</div>Destek</a>
+</div>
+
+</body>
+</html>
