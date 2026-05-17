@@ -3,44 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Store</title>
+<title>Digi Code</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#050507;color:white;overflow-x:hidden}
-.hero{
-min-height:100vh;
-background:radial-gradient(circle at top,#302000,#050507 55%);
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:35px;
-}
+body{background:#050507;color:white}
+.hero{min-height:100vh;background:radial-gradient(circle at top,#3a2600,#050507 60%);display:flex;align-items:center;justify-content:space-between;padding:35px;gap:30px}
+.logo{color:#ffc400;font-size:28px;font-weight:900;margin-bottom:25px}
 .text{max-width:520px}
-.logo{color:#ffc400;font-size:28px;font-weight:900;margin-bottom:35px}
-h1{font-size:58px;line-height:1.05;margin-bottom:20px}
+h1{font-size:50px;line-height:1.1;margin-bottom:18px}
 h1 span{color:#ffc400}
-p{color:#ddd;font-size:18px;line-height:1.6;margin-bottom:30px}
-.btn{
-display:inline-block;
-background:#ffc400;
-color:#111;
-padding:16px 30px;
-border-radius:40px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 0 25px #ffc40066;
+p{color:#ddd;font-size:18px;line-height:1.5;margin-bottom:25px}
+.btn{display:inline-block;background:#ffc400;color:#111;padding:15px 28px;border-radius:40px;font-weight:bold;text-decoration:none}
+.phones{display:flex;align-items:center;gap:16px}
+.phone{width:175px;height:360px;background:#111;border:3px solid #333;border-radius:30px;padding:14px}
+.phone.big{width:215px;height:430px}
+.screen{height:100%;border-radius:22px;background:linear-gradient(160deg,#151515,#2b1b00);padding:16px}
+.badge{color:#ffc400;font-weight:bold;margin-bottom:16px}
+.product{background:#ffffff14;border:1px solid #ffffff22;border-radius:15px;padding:12px;margin-bottom:10px}
+.price{color:#ffc400;font-weight:bold;margin-top:6px}
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center}
+h1{font-size:38px}
+.phones{transform:scale(.8)}
 }
-.phones{
-display:flex;
-align-items:center;
-gap:18px;
-}
-.phone{
-width:185px;
-height:380px;
-background:#111;
-border:3px solid #333;
-border-radius:32px;
-padding:
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="text">
+<div class="logo">DIGI CODE</div>
+<h1>Oyun Kodları ve <span>Gift Card</span></h1>
+<p>Google Play, PUBG UC, Valorant VP, Steam ve dijital kod siparişlerini WhatsApp üzerinden hızlıca al.</p>
+<a class="btn" href="#">WhatsApp Sipariş</a>
+</div>
+
+<div class="phones">
+<div class="phone">
+<div class="screen">
+<div class="badge">PUBG UC</div>
+<div class="product">325 UC <div class="price">₺149</div></div>
+<div class="product">660 UC <div class="price">₺299</div></div>
+</div>
+</div>
+
+<div class="phone big">
+<div class="screen">
+<div class="badge">Dijital Mağaza</div>
+<div class="product">Google Play Kart <div class="price">₺100</div></div>
+<div class="product">Valorant VP <div class="price">₺250</div></div>
+<div class="product">Steam Cüzdan <div class="price">₺500</div></div>
+</div>
+</div>
+
+<div class="phone">
+<div class="screen">
+<div class="badge">Popüler</div>
+<div class="product">Free Fire Elmas <div class="price">₺120</div></div>
+<div class="product">Netflix Kod <div class="price">₺199</div></div>
+</div>
+</div>
+</div>
+</section>
+
 </body>
 </html>
