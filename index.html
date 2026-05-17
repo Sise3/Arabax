@@ -4,124 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIGI CODE</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#030303;color:white;overflow:hidden}
-.hero{
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif
+}
+
+body{
 height:100vh;
-position:relative;
+overflow:hidden;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
-padding:25px;
 background:
-radial-gradient(circle at 50% 30%,#3a2500,transparent 35%),
-linear-gradient(180deg,#050505,#000);
+radial-gradient(circle at top,#5a3900,#000 60%);
+color:white;
+text-align:center;
+position:relative;
 }
-.content{position:relative;z-index:5}
-.logo{color:#ffc400;font-weight:900;letter-spacing:4px;margin-bottom:20px}
-h1{font-size:58px;line-height:1.05;margin-bottom:18px}
-h1 span{color:#ffc400;text-shadow:0 0 25px #ffc400}
-p{color:#ddd;font-size:18px;line-height:1.5;margin-bottom:28px}
+
+h1{
+font-size:58px;
+line-height:1;
+margin-bottom:16px;
+text-shadow:0 0 25px #ffc400;
+}
+
+span{
+color:#ffc400;
+}
+
+p{
+font-size:18px;
+color:#ddd;
+margin-bottom:30px;
+}
+
 .btn{
 display:inline-block;
-background:#ffc400;
-color:#111;
 padding:16px 34px;
 border-radius:50px;
+background:#ffc400;
+color:#111;
 font-weight:900;
 text-decoration:none;
 box-shadow:0 0 30px #ffc40088;
-animation:pulse 1.8s infinite;
+animation:pulse 1.5s infinite;
 }
+
 .coin{
 position:absolute;
-width:70px;
-height:70px;
+width:80px;
+height:80px;
 border-radius:50%;
-background:radial-gradient(circle,#fff2a0,#ffc400,#9b6500);
+background:radial-gradient(circle,#fff3b0,#ffc400,#9b6500);
 box-shadow:0 0 35px #ffc400;
 animation:float 4s infinite ease-in-out;
 }
-.c1{top:12%;left:12%}
-.c2{top:18%;right:14%;animation-delay:.7s}
-.c3{bottom:18%;left:18%;animation-delay:1.2s}
-.c4{bottom:14%;right:16%;animation-delay:1.8s}
-.diamond{
-position:absolute;
-font-size:42px;
-animation:float 3.5s infinite ease-in-out;
-filter:drop-shadow(0 0 18px #00eaff);
-}
-.d1{top:32%;left:8%}
-.d2{bottom:30%;right:8%;animation-delay:1s}
+
+.c1{top:10%;left:10%}
+.c2{top:18%;right:12%;animation-delay:1s}
+.c3{bottom:12%;left:15%;animation-delay:2s}
+.c4{bottom:16%;right:10%;animation-delay:3s}
+
 @keyframes float{
-0%,100%{transform:translateY(0) rotate(0)}
-50%{transform:translateY(-22px) rotate(12deg)}
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
 }
+
 @keyframes pulse{
 0%,100%{transform:scale(1)}
-50%{transform:scale(1.07)}
+50%{transform:scale(1.08)}
 }
-.glow{
-position:absolute;
-bottom:-80px;
-width:120%;
-height:260px;
-background:radial-gradient(ellipse,#ffc40055,transparent 65%);
-filter:blur(45px);
-}
-.cards{
-margin-top:28px;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-}
-.card{
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,196,0,.35);
-border-radius:18px;
-padding:14px;
-backdrop-filter:blur(10px);
-}
-.card b{color:#ffc400}
-@media(max-width:600px){
-h1{font-size:42px}
-.cards{grid-template-columns:1fr}
-.coin{width:52px;height:52px}
+
+.box{
+position:relative;
+z-index:2;
+padding:20px;
 }
 </style>
 </head>
-<body>
 
-<section class="hero">
-<div class="glow"></div>
+<body>
 
 <div class="coin c1"></div>
 <div class="coin c2"></div>
 <div class="coin c3"></div>
 <div class="coin c4"></div>
 
-<div class="diamond d1">💎</div>
-<div class="diamond d2">💎</div>
+<div class="box">
+<h1>DIGI <span>CODE</span></h1>
 
-<div class="content">
-<div class="logo">DIGI CODE</div>
+<p>
+PUBG UC • Valorant VP • Robux • Dijital Kod Market
+</p>
 
-<h1>Oyun Kodları<br><span>Jeton & UC Market</span></h1>
-
-<p>PUBG UC, Valorant VP, Robux, Google Play ve dijital kod siparişleri için premium hızlı satış ekranı.</p>
-
-<a class="btn" href="#">WhatsApp Sipariş</a>
-
-<div class="cards">
-<div class="card"><b>PUBG UC</b><br>Hızlı yükleme</div>
-<div class="card"><b>Valorant VP</b><br>Dijital teslimat</div>
-<div class="card"><b>Robux</b><br>Anında sipariş</div>
+<a class="btn" href="#">
+WhatsApp Sipariş
+</a>
 </div>
-</div>
-</section>
 
 </body>
 </html>
