@@ -5,133 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIGI CODE</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-body{background:#020203;color:white;overflow-x:hidden}
-.hero{
-min-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:30px;
-background:
-radial-gradient(circle at 70% 25%,rgba(255,196,0,.35),transparent 28%),
-radial-gradient(circle at 30% 70%,rgba(120,80,255,.22),transparent 30%),
-linear-gradient(180deg,#050505,#000);
-}
-.content{text-align:center;z-index:5;max-width:720px;margin-top:-40px}
-.logo{font-size:18px;letter-spacing:4px;color:#ffc400;font-weight:800;margin-bottom:18px}
-h1{font-size:66px;line-height:1.02;letter-spacing:-3px;margin-bottom:18px}
-h1 span{background:linear-gradient(90deg,#fff,#ffc400);-webkit-background-clip:text;color:transparent}
-p{font-size:20px;color:#cfcfcf;line-height:1.5;margin-bottom:25px}
-.btn{display:inline-block;background:white;color:#000;padding:15px 28px;border-radius:999px;text-decoration:none;font-weight:800}
-.stage{
-position:absolute;
-bottom:-70px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-align-items:flex-end;
-gap:26px;
-z-index:3;
-}
-.phone{
-width:245px;
-height:500px;
-border-radius:48px;
-background:#111;
-border:5px solid #2b2b2b;
-padding:14px;
-box-shadow:0 0 80px rgba(255,196,0,.28);
-transform:rotate(-10deg) translateY(35px);
-opacity:.85;
-}
-.phone.center{
-width:310px;
-height:620px;
-transform:translateY(0);
-opacity:1;
-box-shadow:0 0 120px rgba(255,196,0,.45);
-}
-.phone.right{transform:rotate(10deg) translateY(35px)}
-.screen{
-height:100%;
-border-radius:36px;
-background:linear-gradient(160deg,#151515,#090909 45%,#3b2700);
-padding:22px;
-overflow:hidden;
-}
-.top{display:flex;justify-content:space-between;color:#aaa;font-size:13px;margin-bottom:28px}
-.bigtitle{font-size:28px;font-weight:900;margin-bottom:16px}
-.card{
-background:rgba(255,255,255,.1);
-border:1px solid rgba(255,255,255,.15);
-border-radius:22px;
-padding:16px;
-margin-bottom:14px;
-backdrop-filter:blur(12px);
-}
-.card b{color:#ffc400}
-.price{font-size:22px;color:#ffc400;font-weight:900;margin-top:8px}
-.glow{
-position:absolute;
-bottom:40px;
-width:900px;
-height:180px;
-background:radial-gradient(ellipse,rgba(255,196,0,.3),transparent 65%);
-filter:blur(35px);
-z-index:1;
-}
-@media(max-width:900px){
-h1{font-size:44px}
-p{font-size:16px}
-.content{margin-top:-120px}
-.stage{bottom:-120px;gap:10px;transform:translateX(-50%) scale(.62)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#151515;color:#fff;padding-bottom:85px}
+.top{position:sticky;top:0;z-index:10;background:#202020;padding:16px;display:flex;gap:12px;align-items:center}
+.menu,.cart{width:54px;height:54px;border-radius:50%;background:#2b2b2b;display:flex;align-items:center;justify-content:center;font-size:28px}
+.search{flex:1;background:#2b2b2b;border-radius:30px;padding:15px 18px;color:#aaa;font-size:18px;display:flex;justify-content:space-between;align-items:center}
+.search b{background:#6d3df5;color:#fff;border-radius:50%;padding:12px}
+.wrap{padding:20px 16px}
+.banner{border-radius:18px;padding:22px;background:linear-gradient(120deg,#111,#342000);border:1px solid #ffc40055;min-height:190px;display:flex;align-items:center;justify-content:space-between;overflow:hidden}
+.banner h1{font-size:34px;line-height:1.05}
+.banner span{color:#ffc400}
+.banner p{color:#ddd;margin-top:10px;font-size:14px}
+.uc{font-size:70px;font-weight:900;color:#ffc400;text-shadow:0 0 25px #ffc40066}
+.title{margin:26px 0 14px;display:flex;justify-content:space-between;align-items:center}
+.title h2{font-size:28px}
+.title button{background:#2b2b2b;color:white;border:1px solid #444;border-radius:18px;padding:12px 18px;font-weight:bold}
+.games{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.game{height:105px;border-radius:18px;background:linear-gradient(135deg,#2d2d2d,#111);display:flex;align-items:end;padding:10px;font-weight:900;border:1px solid #333}
+.game:nth-child(1){background:linear-gradient(135deg,#001f3f,#111)}
+.game:nth-child(2){background:linear-gradient(135deg,#4b1d85,#111)}
+.game:nth-child(3){background:linear-gradient(135deg,#003b55,#111)}
+.game:nth-child(4){background:linear-gradient(135deg,#5b3a00,#111)}
+.game:nth-child(5){background:linear-gradient(135deg,#6b0000,#111)}
+.game:nth-child(6){background:linear-gradient(135deg,#004d28,#111)}
+.game:nth-child(7){background:linear-gradient(135deg,#333,#111)}
+.game:nth-child(8){background:linear-gradient(135deg,#0a45a0,#111)}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.product{background:#202020;border:1px solid #333;border-radius:20px;overflow:hidden}
+.pic{height:115px;background:linear-gradient(135deg,#ffc400,#2b1700);display:flex;align-items:center;justify-content:center;color:#111;font-size:32px;font-weight:900}
+.info{padding:14px}
+.info h3{font-size:17px;margin-bottom:6px}
+.info p{color:#aaa;font-size:13px}
+.price{color:#ffc400;font-size:22px;font-weight:900;margin-top:10px}
+.order{display:block;margin-top:12px;background:#ffc400;color:#111;text-decoration:none;text-align:center;padding:12px;border-radius:14px;font-weight:900}
+.whatsapp{position:fixed;right:18px;bottom:95px;background:#25d366;color:white;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;text-decoration:none;box-shadow:0 0 20px #000}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#111;border-top:1px solid #333;display:grid;grid-template-columns:repeat(5,1fr);padding:10px 4px;z-index:20}
+.bottom a{color:white;text-decoration:none;text-align:center;font-size:12px}
+.bottom div{font-size:24px;margin-bottom:4px}
+@media(max-width:430px){
+.games{grid-template-columns:repeat(4,1fr)}
+.game{height:92px;font-size:12px}
+.banner h1{font-size:28px}
+.uc{font-size:52px}
 }
 </style>
 </head>
 <body>
 
-<section class="hero">
-<div class="content">
-<div class="logo">DIGI CODE</div>
-<h1>Premium <span>Digital Store</span></h1>
-<p>Google Play, PUBG UC, Valorant VP ve dijital kod siparişleri için hızlı WhatsApp satış ekranı.</p>
-<a class="btn" href="#">Sipariş Ver</a>
+<div class="top">
+  <div class="menu">☰</div>
+  <div class="search">Ürün ara <b>⌕</b></div>
+  <div class="cart">🛒</div>
 </div>
 
-<div class="glow"></div>
+<div class="wrap">
 
-<div class="stage">
-<div class="phone">
-<div class="screen">
-<div class="top"><span>9:41</span><span>●●●</span></div>
-<div class="bigtitle">PUBG UC</div>
-<div class="card">325 UC <div class="price">₺149</div></div>
-<div class="card">660 UC <div class="price">₺299</div></div>
-</div>
+  <div class="banner">
+    <div>
+      <h1>PUBG MOBILE <span>UC</span><br>Yükle, Hazır Ol!</h1>
+      <p>Güvenli ödeme • Hızlı teslimat • WhatsApp sipariş</p>
+    </div>
+    <div class="uc">UC</div>
+  </div>
+
+  <div class="title">
+    <h2>Popüler Oyunlar</h2>
+    <button>TÜMÜ</button>
+  </div>
+
+  <div class="games">
+    <div class="game">STEAM</div>
+    <div class="game">VALORANT</div>
+    <div class="game">PlayStation</div>
+    <div class="game">WHITEOUT</div>
+    <div class="game">LOL</div>
+    <div class="game">MOBILE LEGENDS</div>
+    <div class="game">PUBG</div>
+    <div class="game">ROBLOX</div>
+  </div>
+
+  <div class="title">
+    <h2>Çok Satanlar</h2>
+    <button>Ürünler ›</button>
+  </div>
+
+  <div class="products">
+    <div class="product">
+      <div class="pic">GP</div>
+      <div class="info">
+        <h3>Google Play Kart</h3>
+        <p>Dijital kod teslimatı</p>
+        <div class="price">₺100</div>
+        <a class="order" href="https://wa.me/905000000000">Sipariş Ver</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="pic">UC</div>
+      <div class="info">
+        <h3>PUBG Mobile UC</h3>
+        <p>Hızlı yükleme</p>
+        <div class="price">₺149</div>
+        <a class="order" href="https://wa.me/905000000000">Sipariş Ver</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="pic">VP</div>
+      <div class="info">
+        <h3>Valorant VP</h3>
+        <p>TR hesap uyumlu</p>
+        <div class="price">₺250</div>
+        <a class="order" href="https://wa.me/905000000000">Sipariş Ver</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="pic">RB</div>
+      <div class="info">
+        <h3>Roblox Robux</h3>
+        <p>Popüler ürün</p>
+        <div class="price">₺120</div>
+        <a class="order" href="https://wa.me/905000000000">Sipariş Ver</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div class="phone center">
-<div class="screen">
-<div class="top"><span>9:41</span><span>●●●</span></div>
-<div class="bigtitle">Top Up Store</div>
-<div class="card"><b>Google Play</b><br>Gift Card <div class="price">₺100</div></div>
-<div class="card"><b>Valorant VP</b><br>Hızlı Teslimat <div class="price">₺250</div></div>
-<div class="card"><b>Steam Wallet</b><br>Dijital Kod <div class="price">₺500</div></div>
-</div>
-</div>
+<a class="whatsapp" href="https://wa.me/905000000000">☎</a>
 
-<div class="phone right">
-<div class="screen">
-<div class="top"><span>9:41</span><span>●●●</span></div>
-<div class="bigtitle">Popüler</div>
-<div class="card">Free Fire <div class="price">₺120</div></div>
-<div class="card">Netflix <div class="price">₺199</div></div>
+<div class="bottom">
+  <a href="#"><div>🏠</div>Anasayfa</a>
+  <a href="#"><div>📦</div>Sipariş</a>
+  <a href="#"><div>🛍️</div>Mağaza</a>
+  <a href="#"><div>🛒</div>Sepet</a>
+  <a href="#"><div>👤</div>Hesabım</a>
 </div>
-</div>
-</div>
-</section>
 
 </body>
 </html>
