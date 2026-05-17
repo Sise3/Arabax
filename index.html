@@ -6,35 +6,35 @@
 <title>DIGI CODE</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#101014;color:white;padding-bottom:95px}
-.top{position:sticky;top:0;z-index:99;background:#1d1d22;padding:15px;display:flex;gap:12px;align-items:center}
-.icon{width:58px;height:58px;border-radius:50%;background:#2b2b31;display:flex;align-items:center;justify-content:center;font-size:28px}
-.search{flex:1;background:#2b2b31;border-radius:35px;padding:17px;color:#aaa;font-size:18px}
+body{background:#0f0f13;color:#fff;padding-bottom:90px}
+.top{position:sticky;top:0;z-index:9;background:#18181e;padding:14px;display:flex;gap:12px;align-items:center}
+.icon{width:54px;height:54px;border-radius:50%;background:#292930;display:flex;align-items:center;justify-content:center;font-size:26px}
+.search{flex:1;background:#292930;border-radius:30px;padding:16px;color:#aaa}
 .wrap{padding:16px}
-.hero{height:270px;border-radius:26px;padding:22px;background:linear-gradient(120deg,rgba(0,0,0,.2),rgba(0,0,0,.8)),url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400&auto=format&fit=crop');background-size:cover;background-position:center;display:flex;align-items:flex-end;border:1px solid #7b4dff;box-shadow:0 0 25px #7b4dff55}
-.hero h1{font-size:38px;line-height:1}
+.hero{height:300px;border-radius:28px;padding:24px;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.85)),url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1400&auto=format&fit=crop');background-size:cover;background-position:center;border:1px solid #ffc40055;box-shadow:0 0 35px #ffc40022;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-80px;background:linear-gradient(120deg,transparent,rgba(255,196,0,.25),transparent);animation:shine 4s infinite}
+@keyframes shine{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.hero div{position:relative;z-index:2}
+.hero h1{font-size:40px;line-height:1}
 .hero span{color:#ffc400}
-.hero p{margin-top:8px;color:#ddd}
-.box{background:#17171c;border-radius:22px;padding:18px;margin:18px 0}
-.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
-.head h2{font-size:26px}
-.btn{background:#2c2c34;padding:12px 18px;border-radius:16px;font-weight:bold}
+.hero p{color:#ddd;margin-top:10px}
+.head{margin:26px 0 14px;display:flex;justify-content:space-between;align-items:center}
+.head h2{font-size:27px}
+.btn{background:#292930;padding:11px 16px;border-radius:15px}
 .games{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.game{height:130px;border-radius:18px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:10px;font-weight:900;box-shadow:inset 0 -70px 60px #000}
+.game{height:125px;border-radius:20px;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:10px;font-weight:900;font-size:13px;box-shadow:inset 0 -80px 60px #000;border:1px solid #333;animation:float 3s ease-in-out infinite}
+.game:nth-child(even){animation-delay:.5s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.product{background:#1d1d23;border-radius:20px;overflow:hidden;border:1px solid #333}
-.pic{height:140px;background-size:cover;background-position:center}
+.product{background:#1b1b21;border-radius:22px;overflow:hidden;border:1px solid #333;box-shadow:0 0 18px #000}
+.pic{height:145px;background-size:cover;background-position:center}
 .info{padding:14px}
-.price{color:#ffc400;font-size:22px;font-weight:900;margin:8px 0}
-.order{display:block;background:#ffc400;color:#111;text-align:center;padding:12px;border-radius:14px;text-decoration:none;font-weight:900}
-.banner{height:150px;border-radius:22px;padding:20px;margin:18px 0;background:linear-gradient(135deg,#3b2500,#111);display:flex;align-items:center;justify-content:space-between;border:1px solid #ffc40055}
-.banner h3{font-size:25px}
-.banner b{font-size:44px;color:#ffc400}
-.why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.why div{background:#1c1c22;border-radius:18px;padding:16px;border:1px solid #333}
-.whatsapp{position:fixed;right:18px;bottom:100px;width:68px;height:68px;border-radius:50%;background:#25d366;color:white;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:34px;z-index:999}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:#15151a;border-top:1px solid #333;display:grid;grid-template-columns:repeat(5,1fr);padding:10px 4px;z-index:999}
-.bottom a{text-align:center;color:white;text-decoration:none;font-size:12px}
+.info p{color:#aaa;font-size:13px;margin-top:4px}
+.price{color:#ffc400;font-weight:900;font-size:24px;margin:10px 0}
+.order{display:block;background:#ffc400;color:#111;text-align:center;padding:13px;border-radius:15px;text-decoration:none;font-weight:900;box-shadow:0 0 18px #ffc40055}
+.whatsapp{position:fixed;right:18px;bottom:98px;width:66px;height:66px;border-radius:50%;background:#25d366;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:34px;z-index:99}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#141419;border-top:1px solid #333;display:grid;grid-template-columns:repeat(5,1fr);padding:10px 4px;z-index:99}
+.bottom a{text-align:center;color:#fff;text-decoration:none;font-size:12px}
 .bottom div{font-size:24px}
 </style>
 </head>
@@ -42,7 +42,7 @@ body{background:#101014;color:white;padding-bottom:95px}
 
 <div class="top">
 <div class="icon">☰</div>
-<div class="search">Ürün ara</div>
+<div class="search">Ürün ara...</div>
 <div class="icon">🛒</div>
 </div>
 
@@ -50,13 +50,13 @@ body{background:#101014;color:white;padding-bottom:95px}
 
 <div class="hero">
 <div>
-<h1>PUBG MOBILE <span>UC</span><br>Yükle, Zafer Başlasın</h1>
-<p>Güvenli ödeme • Anında teslimat • 7/24 destek</p>
+<h1>PUBG MOBILE <span>UC</span><br>Hızlı Yükleme</h1>
+<p>Güvenli sipariş • WhatsApp destek • Dijital teslimat</p>
 </div>
 </div>
 
-<div class="box">
-<div class="head"><h2>Popüler Oyunlar</h2><div class="btn">TÜMÜ</div></div>
+<div class="head"><h2>Popüler Oyunlar</h2><div class="btn">Tümü</div></div>
+
 <div class="games">
 <div class="game" style="background-image:url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=900')">STEAM</div>
 <div class="game" style="background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=900')">VALORANT</div>
@@ -67,38 +67,18 @@ body{background:#101014;color:white;padding-bottom:95px}
 <div class="game" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=900')">ROBLOX</div>
 <div class="game" style="background-image:url('https://images.unsplash.com/photo-1547394765-185e1e68f34e?q=80&w=900')">WHITEOUT</div>
 </div>
-</div>
 
-<div class="box">
-<div class="head"><h2>Çok Satanlar</h2><div class="btn">Ürünler ›</div></div>
+<div class="head"><h2>Çok Satanlar</h2><div class="btn">Ürünler</div></div>
+
 <div class="products">
-<div class="product"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1605901309584-818e25960a8f?q=80&w=900')"></div><div class="info"><h3>Google Play Kart</h3><p>Dijital teslimat</p><div class="price">₺100</div><a class="order" href="#">Sipariş Ver</a></div></div>
-<div class="product"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=900')"></div><div class="info"><h3>PUBG Mobile UC</h3><p>Hızlı yükleme</p><div class="price">₺149</div><a class="order" href="#">Sipariş Ver</a></div></div>
-<div class="product"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=900')"></div><div class="info"><h3>Valorant VP</h3><p>TR uyumlu</p><div class="price">₺250</div><a class="order" href="#">Sipariş Ver</a></div></div>
-<div class="product"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=900')"></div><div class="info"><h3>Steam Cüzdan</h3><p>Kod teslimatı</p><div class="price">₺500</div><a class="order" href="#">Sipariş Ver</a></div></div>
-</div>
+<div class="product">
+<div class="pic" style="background-image:url('https://images.unsplash.com/photo-1605901309584-818e25960a8f?q=80&w=900')"></div>
+<div class="info"><h3>Google Play Kart</h3><p>Dijital kod teslimatı</p><div class="price">₺100</div><a class="order" href="#">Sipariş Ver</a></div>
 </div>
 
-<div class="banner">
-<div><h3>Haftalık İndirim</h3><p>Seçili kodlarda özel fırsat</p></div>
-<b>%20</b>
-</div>
-
-<div class="box">
-<div class="head"><h2>Hediye Kartları</h2><div class="btn">Bak</div></div>
-<div class="products">
-<div class="product"><div class="info"><h3>PlayStation Gift Card</h3><p>Dijital kod</p><div class="price">₺300</div><a class="order" href="#">Sipariş Ver</a></div></div>
-<div class="product"><div class="info"><h3>Xbox Gift Card</h3><p>Dijital kod</p><div class="price">₺300</div><a class="order" href="#">Sipariş Ver</a></div></div>
-</div>
-</div>
-
-<div class="box">
-<div class="head"><h2>Neden Biz?</h2></div>
-<div class="why">
-<div>⚡ Anında teslimat</div>
-<div>🔒 Güvenli alışveriş</div>
-<div>💬 WhatsApp destek</div>
-<div>🎮 Popüler ürünler</div>
+<div class="product">
+<div class="pic" style="background-image:url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=900')"></div>
+<div class="info"><h3>PUBG Mobile UC</h3><p>Hızlı yükleme</p><div class="price">₺149</div><a class="order" href="#">Sipariş Ver</a></div>
 </div>
 </div>
 
