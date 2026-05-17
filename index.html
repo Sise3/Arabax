@@ -3,78 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIGI COIN</title>
+<title>Arabax Dijital</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#050505;color:white;font-family:Arial,sans-serif;padding-bottom:80px}
-header{background:#0f0f12;padding:16px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:9}
-.logo{font-size:24px;font-weight:900;color:#f8c400}
-.search{flex:1;background:#202026;border-radius:30px;padding:14px;color:#999}
-.wrap{padding:16px}
-.hero{height:300px;border-radius:28px;background:radial-gradient(circle at top,#6b4300,#080808 65%);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;position:relative;overflow:hidden}
-.hero h1{font-size:44px;margin:0;color:#f8c400;text-shadow:0 0 30px #f8c400}
-.hero p{color:#ddd;font-size:16px}
-.coin{position:absolute;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle,#fff4a0,#f8c400,#8a5a00);box-shadow:0 0 25px #f8c400;animation:float 4s infinite}
-.c1{top:25px;left:25px}.c2{top:50px;right:30px;animation-delay:1s}.c3{bottom:30px;left:45px;animation-delay:2s}.c4{bottom:40px;right:35px;animation-delay:3s}
-@keyframes float{50%{transform:translateY(-22px)}}
-.title{font-size:26px;margin:26px 0 14px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:#15151a;border:1px solid #2d2d35;border-radius:22px;overflow:hidden}
-.pic{height:120px;background:linear-gradient(135deg,#332000,#111);display:flex;align-items:center;justify-content:center;font-size:42px}
-.info{padding:15px}
-.info h3{margin:0 0 6px}
-.info p{color:#aaa;font-size:13px}
-.price{color:#f8c400;font-size:25px;font-weight:900;margin:12px 0}
-.btn{display:block;background:#f8c400;color:#111;text-align:center;padding:13px;border-radius:14px;text-decoration:none;font-weight:900}
-.note{margin-top:22px;background:#111;border:1px solid #333;border-radius:22px;padding:18px;color:#ccc;line-height:1.5}
-.whatsapp{position:fixed;right:18px;bottom:90px;background:#25d366;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;font-size:32px}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:#101014;border-top:1px solid #333;display:grid;grid-template-columns:repeat(4,1fr);padding:10px 0}
-.bottom a{text-align:center;color:white;text-decoration:none;font-size:12px}
-.bottom div{font-size:23px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#050505;color:white}
+header{background:#0b0b0b;padding:15px;border-bottom:1px solid #222;position:sticky;top:0;z-index:9}
+.logo{font-size:26px;font-weight:900;color:#00ff88}
+.logo span{color:white}
+.search{margin-top:12px}
+.search input{width:100%;padding:14px;border-radius:12px;border:1px solid #333;background:#111;color:white;font-size:16px}
+.hero{padding:25px 15px;background:linear-gradient(135deg,#071f14,#000)}
+.hero h1{font-size:32px;margin-bottom:10px}
+.hero p{color:#ccc;font-size:16px}
+.btn{display:inline-block;margin-top:18px;background:#00ff88;color:#000;padding:14px 22px;border-radius:12px;font-weight:bold;text-decoration:none}
+.categories{display:flex;gap:10px;overflow-x:auto;padding:15px}
+.cat{min-width:120px;background:#111;border:1px solid #222;border-radius:14px;padding:15px;text-align:center}
+.cat b{color:#00ff88}
+.section{padding:15px}
+.section h2{margin-bottom:15px;font-size:22px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:#101010;border:1px solid #222;border-radius:18px;overflow:hidden}
+.card img{width:100%;height:120px;object-fit:cover;background:#222}
+.card .info{padding:12px}
+.card h3{font-size:16px;margin-bottom:6px}
+.price{color:#00ff88;font-size:20px;font-weight:bold;margin:8px 0}
+.buy{display:block;text-align:center;background:#00ff88;color:#000;padding:11px;border-radius:10px;text-decoration:none;font-weight:bold}
+.badge{background:#1a1a1a;color:#00ff88;font-size:12px;padding:5px 8px;border-radius:20px;display:inline-block;margin-bottom:6px}
+footer{text-align:center;color:#777;padding:25px;border-top:1px solid #222;margin-top:20px}
+.whatsapp{position:fixed;right:15px;bottom:15px;background:#25D366;color:white;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:bold}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr)}.hero h1{font-size:48px}.card img{height:160px}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">DIGI COIN</div>
-<div class="search">Jeton ara...</div>
+  <div class="logo">ARABAX <span>DİJİTAL</span></div>
+  <div class="search">
+    <input placeholder="Google Play, PUBG UC, Valorant VP ara...">
+  </div>
 </header>
 
-<div class="wrap">
-
 <section class="hero">
-<div class="coin c1"></div><div class="coin c2"></div><div class="coin c3"></div><div class="coin c4"></div>
-<div>
-<h1>DİJİTAL JETON MARKET</h1>
-<p>UC • VP • Robux • Oyun Parası • Hızlı Teslimat</p>
-<a class="btn" href="https://wa.me/905000000000">WhatsApp Sipariş</a>
-</div>
+  <h1>Dijital Kod ve Oyun Parası Satışı</h1>
+  <p>Google Play, PUBG UC, Valorant VP, Steam Cüzdan ve daha fazlası. Hızlı teslimat, güvenli alışveriş.</p>
+  <a class="btn" href="https://wa.me/905000000000">WhatsApp’tan Sipariş Ver</a>
 </section>
 
-<h2 class="title">Popüler Jetonlar</h2>
-
-<div class="grid">
-<div class="card"><div class="pic">🪙</div><div class="info"><h3>PUBG UC</h3><p>Hızlı yükleme</p><div class="price">₺149</div><a class="btn" href="#">Hemen Al</a></div></div>
-<div class="card"><div class="pic">💎</div><div class="info"><h3>Valorant VP</h3><p>Dijital teslimat</p><div class="price">₺250</div><a class="btn" href="#">Hemen Al</a></div></div>
-<div class="card"><div class="pic">🧊</div><div class="info"><h3>Robux</h3><p>Roblox jetonu</p><div class="price">₺120</div><a class="btn" href="#">Hemen Al</a></div></div>
-<div class="card"><div class="pic">⚡</div><div class="info"><h3>Google Play</h3><p>Kod teslimatı</p><div class="price">₺100</div><a class="btn" href="#">Hemen Al</a></div></div>
+<div class="categories">
+  <div class="cat"><b>Google Play</b><br>Kodlar</div>
+  <div class="cat"><b>PUBG</b><br>UC</div>
+  <div class="cat"><b>Valorant</b><br>VP</div>
+  <div class="cat"><b>Steam</b><br>Cüzdan</div>
+  <div class="cat"><b>Netflix</b><br>Hediye</div>
 </div>
 
-<div class="note">
-<b style="color:#f8c400">Güvenli Dijital Teslimat</b><br><br>
-Siparişler WhatsApp üzerinden alınır. Ödeme sonrası jeton, kod veya yükleme bilgisi hızlıca teslim edilir.
-</div>
+<section class="section">
+  <h2>Popüler Ürünler</h2>
+  <div class="grid">
 
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=600&q=80">
+      <div class="info">
+        <span class="badge">Anında Teslim</span>
+        <h3>Google Play 100 TL</h3>
+        <div class="price">115 TL</div>
+        <a class="buy" href="https://wa.me/905000000000">Satın Al</a>
+      </div>
+    </div>
 
-<a class="whatsapp" href="https://wa.me/905000000000">☎</a>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80">
+      <div class="info">
+        <span class="badge">Popüler</span>
+        <h3>PUBG Mobile UC</h3>
+        <div class="price">149 TL</div>
+        <a class="buy" href="https://wa.me/905000000000">Satın Al</a>
+      </div>
+    </div>
 
-<div class="bottom">
-<a href="#"><div>🏠</div>Ana Sayfa</a>
-<a href="#"><div>🪙</div>Jetonlar</a>
-<a href="#"><div>🛒</div>Sepet</a>
-<a href="#"><div>💬</div>Destek</a>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80">
+      <div class="info">
+        <span class="badge">Stokta</span>
+        <h3>Valorant VP</h3>
+        <div class="price">199 TL</div>
+        <a class="buy" href="https://wa.me/905000000000">Satın Al</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80">
+      <div class="info">
+        <span class="badge">Güvenli</span>
+        <h3>Steam Cüzdan Kodu</h3>
+        <div class="price">250 TL</div>
+        <a class="buy" href="https://wa.me/905000000000">Satın Al</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Neden Biz?</h2>
+  <div class="grid">
+    <div class="cat"><b>7/24</b><br>Destek</div>
+    <div class="cat"><b>Hızlı</b><br>Teslimat</div>
+    <div class="cat"><b>Güvenli</b><br>Alışveriş</div>
+    <div class="cat"><b>Uygun</b><br>Fiyat</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Arabax Dijital<br>
+  Tüm dijital kodlar stok durumuna göre teslim edilir.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/905000000000">WhatsApp</a>
 
 </body>
 </html>
