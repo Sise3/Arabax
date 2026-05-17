@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -5,68 +6,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARABAX</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#111;color:white}
-header{
-min-height:100vh;
-background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
-url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:25px
-}
-h1{font-size:55px;color:#ff3c00;margin-bottom:20px}
-p{font-size:20px;line-height:1.6;margin-bottom:25px}
-a{display:inline-block;background:#ff3c00;color:white;padding:15px 30px;border-radius:12px;text-decoration:none;font-size:20px}
-section{padding:50px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.card{background:#1d1d1d;border-radius:18px;overflow:hidden}
-.card img{width:100%;height:220px;object-fit:cover}
-.card div{padding:20px}
-.card h2{color:#ff3c00;margin-bottom:10px}
-footer{text-align:center;background:#000;padding:25px;color:#aaa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#111;color:#fff}
+.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.75)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+.box{max-width:850px}
+.logo{font-size:44px;font-weight:900;color:#ffb300;margin-bottom:15px}
+h1{font-size:42px;margin-bottom:15px}
+p{font-size:18px;line-height:1.6;color:#eee;margin-bottom:25px}
+.btn{display:inline-block;background:#ffb300;color:#111;padding:15px 28px;border-radius:30px;text-decoration:none;font-weight:bold}
+.section{padding:35px 20px;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:25px}
+.card{background:#1d1d1d;border:1px solid #333;border-radius:18px;padding:22px}
+.card h3{color:#ffb300;margin-bottom:10px}
+footer{padding:25px;text-align:center;background:#000;color:#aaa}
 </style>
 </head>
 <body>
 
-<header>
-<div>
-<h1>ARABAX</h1>
-<p>Türkiye'nin yeni nesil araç satış platformu. Güvenli alım satım, hızlı ilan ve modern tasarım.</p>
-<a href="#cars">Araçları İncele</a>
-</div>
-</header>
-
-<section id="cars">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop">
-<div>
-<h2>BMW M4</h2>
-<p>2023 Model • Otomatik • 18.000 KM</p>
-</div>
+<div class="hero">
+  <div class="box">
+    <div class="logo">ARABAX</div>
+    <h1>Güvenilir Araç Alım Satım Platformu</h1>
+    <p>Arabax ile aracını hızlıca sergile, alıcılarla buluş ve güvenli şekilde satış yap.</p>
+    <a class="btn" href="tel:+905000000000">Hemen İletişime Geç</a>
+  </div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
-<div>
-<h2>Mercedes AMG</h2>
-<p>Lüks performans ve modern sürüş deneyimi.</p>
-</div>
+<div class="section">
+  <h2>Neden ARABAX?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Hızlı İlan</h3>
+      <p>Aracını kısa sürede yayına al.</p>
+    </div>
+    <div class="card">
+      <h3>Güvenli Satış</h3>
+      <p>Alıcı ve satıcıyı doğru şekilde buluşturur.</p>
+    </div>
+    <div class="card">
+      <h3>Komisyon Modeli</h3>
+      <p>Satıştan kazanç sağlayabileceğin sistem.</p>
+    </div>
+  </div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200&auto=format&fit=crop">
-<div>
-<h2>Audi RS7</h2>
-<p>Sportif tasarım • Güçlü motor • Premium iç mekan</p>
-</div>
-</div>
-</section>
-
-<footer>© 2026 ARABAX - Tüm Hakları Saklıdır</footer>
+<footer>
+  © 2026 ARABAX - Tüm Hakları Saklıdır
+</footer>
 
 </body>
 </html>
