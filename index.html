@@ -1,161 +1,179 @@
-<section style="padding:20px;">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGI MARKET</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#030006!important;color:#fff;font-family:'Rajdhani',sans-serif;overflow-x:hidden}
+body{padding-bottom:85px}
 
-<div style="
-background:#0b0b12;
-border:1px solid #2d1842;
-border-radius:20px;
-padding:20px;
-margin-bottom:18px;
-box-shadow:0 0 25px rgba(168,85,255,.12);
-">
+.top{
+height:64px;background:#050008;display:flex;align-items:center;justify-content:space-between;
+padding:0 14px;border-bottom:1px solid #261235;position:sticky;top:0;z-index:99
+}
+.logo{font-size:24px;font-weight:700;letter-spacing:1px}
+.logo span{color:#b15cff;text-shadow:0 0 15px #9b35ff}
+.icon{font-size:27px}
 
-<h2 style="
-font-size:28px;
-margin-bottom:10px;
-color:#fff;
-">
-🔥 Özel Kampanyalar
-</h2>
+.hero{
+margin:14px;border-radius:20px;padding:24px;min-height:350px;
+background:linear-gradient(90deg,#09000f 0%,rgba(30,0,45,.78) 48%,rgba(0,0,0,.35)),
+url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200');
+background-size:cover;background-position:center;
+border:1px solid #32154b;box-shadow:0 0 35px rgba(168,85,255,.28);
+display:flex;flex-direction:column;justify-content:end
+}
+.badge{
+width:max-content;padding:8px 13px;border:1px solid #9b35ff;border-radius:9px;
+background:#7b2cff33;font-size:12px;font-weight:700;margin-bottom:16px
+}
+.hero h1{font-size:34px;line-height:1;font-weight:700;text-transform:uppercase}
+.hero h1 span{color:#b15cff;text-shadow:0 0 15px #9b35ff}
+.hero p{font-size:15px;color:#ddd;line-height:1.45;margin:15px 0 20px}
+.btn{
+height:55px;border:0;border-radius:14px;background:linear-gradient(90deg,#7b2cff,#c05cff);
+color:white;font-size:17px;font-weight:700;box-shadow:0 0 22px rgba(168,85,255,.5)
+}
 
-<p style="
-color:#aaa;
-font-size:17px;
-line-height:1.5;
-margin-bottom:18px;
-">
-PUBG UC, Valorant VP ve Robux ürünlerinde kaçırılmayacak indirimler seni bekliyor.
-</p>
+.features{
+margin:14px;display:grid;grid-template-columns:repeat(4,1fr);
+background:#09090f;border:1px solid #241334;border-radius:17px;overflow:hidden
+}
+.f{text-align:center;padding:15px 4px;border-right:1px solid #241334}
+.f:last-child{border-right:0}
+.f b{font-size:24px;display:block;margin-bottom:6px}
+.f span{font-size:11px;font-weight:700;display:block;line-height:1.1}
 
-<button style="
-width:100%;
-height:55px;
-border:none;
-border-radius:14px;
-background:linear-gradient(90deg,#7b2cff,#c05cff);
-color:white;
-font-size:18px;
-font-weight:700;
-box-shadow:0 0 25px rgba(168,85,255,.4);
-">
-KAMPANYALARI GÖR
-</button>
+.title{
+margin:26px 14px 12px;display:flex;justify-content:space-between;align-items:center
+}
+.title h2{font-size:25px}
+.title a{color:#b15cff;text-decoration:none;font-weight:700;font-size:14px}
 
+.products{
+display:flex;gap:13px;overflow-x:auto;padding:0 14px 18px;scroll-snap-type:x mandatory
+}
+.products::-webkit-scrollbar{display:none}
+.card{
+min-width:178px;background:#09090f;border:1px solid #28143b;border-radius:17px;overflow:hidden;
+scroll-snap-align:start;box-shadow:0 0 22px rgba(168,85,255,.12)
+}
+.pic{height:155px;background-size:cover;background-position:center}
+.c1{background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800')}
+.c2{background-image:url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800')}
+.c3{background-image:url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=800')}
+.c4{background-image:url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=800')}
+.card-body{padding:13px}
+.card h3{font-size:24px}
+.card small{color:#aaa}
+.price{font-size:26px;color:#44ff77;font-weight:700;margin:9px 0}
+.buy{
+width:100%;height:43px;border-radius:10px;border:1px solid #9b35ff;background:#7b2cff22;
+color:white;font-weight:700
+}
+
+.promo,.comments{
+margin:14px;background:#09090f;border:1px solid #28143b;border-radius:18px;
+padding:18px;box-shadow:0 0 22px rgba(168,85,255,.1)
+}
+.promo h2,.comments h2{font-size:25px;margin-bottom:8px}
+.promo p,.comments p{color:#aaa;line-height:1.45}
+.promo button{
+margin-top:15px;width:100%;height:52px;border:0;border-radius:13px;
+background:linear-gradient(90deg,#7b2cff,#c05cff);color:white;font-weight:700;font-size:16px
+}
+
+.quick{
+margin:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px
+}
+.quick div{
+background:#09090f;border:1px solid #28143b;border-radius:17px;padding:16px;min-height:120px
+}
+.quick b{font-size:30px;display:block;margin-bottom:8px}
+.quick h3{font-size:20px}
+.quick p{color:#aaa;font-size:14px;margin-top:6px}
+
+.review{
+background:#11111a;border-radius:13px;padding:13px;margin-top:11px
+}
+.review b{font-size:17px}
+.review p{font-size:14px;margin-top:5px}
+
+.nav{
+position:fixed;bottom:0;left:0;right:0;height:76px;background:#07070b;
+border-top:1px solid #241334;display:flex;justify-content:space-around;align-items:center;z-index:999
+}
+.nav div{text-align:center;color:#aaa;font-size:12px}
+.nav .active{color:#b15cff}
+.nav b{display:block;font-size:21px}
+
+@media(max-width:380px){
+.hero h1{font-size:30px}
+.card{min-width:165px}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="icon">☰</div>
+  <div class="logo">DIGI <span>MARKET</span></div>
+  <div class="icon">🎧</div>
 </div>
 
-<div style="
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-bottom:18px;
-">
+<section class="hero">
+  <div class="badge">EN UYGUN FİYATLAR</div>
+  <h1>DİJİTAL DÜNYANIN<br><span>EN GÜVENİLİR MARKETİ!</span></h1>
+  <p>PUBG UC, Valorant VP, Robux ve daha fazlası anında teslimat güvencesiyle DIGI MARKET’te!</p>
+  <button class="btn">ALIŞVERİŞE BAŞLA ❯</button>
+</section>
 
-<div style="
-background:#0b0b12;
-border:1px solid #2d1842;
-border-radius:18px;
-padding:18px;
-">
+<section class="features">
+  <div class="f"><b>⚡</b><span>ANINDA<br>TESLİMAT</span></div>
+  <div class="f"><b>🛡️</b><span>%100<br>GÜVENLİ</span></div>
+  <div class="f"><b>🎧</b><span>7/24<br>DESTEK</span></div>
+  <div class="f"><b>⭐</b><span>MÜŞTERİ<br>MEMNUNİYETİ</span></div>
+</section>
 
-<div style="font-size:35px;">💬</div>
-
-<h3 style="
-margin-top:12px;
-font-size:22px;
-">
-WhatsApp Destek
-</h3>
-
-<p style="
-color:#aaa;
-margin-top:8px;
-font-size:15px;
-line-height:1.5;
-">
-Sipariş için bize anında yazabilirsiniz.
-</p>
-
+<div class="title">
+  <h2>🔥 Popüler Ürünler</h2>
+  <a href="#">TÜMÜNÜ GÖR</a>
 </div>
 
-<div style="
-background:#0b0b12;
-border:1px solid #2d1842;
-border-radius:18px;
-padding:18px;
-">
+<section class="products">
+  <div class="card"><div class="pic c1"></div><div class="card-body"><h3>60 UC</h3><small>PUBG MOBILE</small><div class="price">₺26,90</div><button class="buy">🛒 SATIN AL</button></div></div>
+  <div class="card"><div class="pic c2"></div><div class="card-body"><h3>325 UC</h3><small>PUBG MOBILE</small><div class="price">₺129,90</div><button class="buy">🛒 SATIN AL</button></div></div>
+  <div class="card"><div class="pic c3"></div><div class="card-body"><h3>475 VP</h3><small>VALORANT</small><div class="price">₺159,90</div><button class="buy">🛒 SATIN AL</button></div></div>
+  <div class="card"><div class="pic c4"></div><div class="card-body"><h3>800 ROBUX</h3><small>ROBLOX</small><div class="price">₺89,90</div><button class="buy">🛒 SATIN AL</button></div></div>
+</section>
 
-<div style="font-size:35px;">🎮</div>
+<section class="promo">
+  <h2>🎁 Özel Kampanyalar</h2>
+  <p>Bugüne özel dijital ürünlerde hızlı teslimat ve uygun fiyat fırsatları.</p>
+  <button>KAMPANYALARI GÖR</button>
+</section>
 
-<h3 style="
-margin-top:12px;
-font-size:22px;
-">
-Tüm Ürünler
-</h3>
+<section class="quick">
+  <div><b>💬</b><h3>WhatsApp Destek</h3><p>Sipariş için bize hemen yaz.</p></div>
+  <div><b>🎮</b><h3>Tüm Ürünler</h3><p>UC, VP, Robux ve E-Pin ürünlerini keşfet.</p></div>
+</section>
 
-<p style="
-color:#aaa;
-margin-top:8px;
-font-size:15px;
-line-height:1.5;
-">
-Tüm dijital ürünleri keşfet.
-</p>
+<section class="comments">
+  <h2>⭐ Müşteri Yorumları</h2>
+  <div class="review"><b>Ahmet Y.</b><p>UC satın aldım, kısa sürede teslim edildi.</p></div>
+  <div class="review"><b>Mehmet K.</b><p>Fiyatlar uygun, site görünümü güven veriyor.</p></div>
+</section>
 
-</div>
-
-</div>
-
-<div style="
-background:#0b0b12;
-border:1px solid #2d1842;
-border-radius:20px;
-padding:22px;
-">
-
-<h2 style="
-font-size:26px;
-margin-bottom:18px;
-">
-⭐ Müşteri Yorumları
-</h2>
-
-<div style="
-background:#12121a;
-padding:15px;
-border-radius:14px;
-margin-bottom:12px;
-">
-
-<b style="font-size:18px;">Ahmet Y.</b>
-
-<p style="
-color:#aaa;
-margin-top:8px;
-line-height:1.5;
-">
-UC satın aldım 2 dakika içinde teslim edildi. Gerçekten çok hızlı.
-</p>
-
-</div>
-
-<div style="
-background:#12121a;
-padding:15px;
-border-radius:14px;
-">
-
-<b style="font-size:18px;">Mehmet K.</b>
-
-<p style="
-color:#aaa;
-margin-top:8px;
-line-height:1.5;
-">
-Fiyatlar piyasaya göre baya iyi. Güvenilir site olmuş.
-</p>
-
-</div>
-
-</div>
- 
 <div class="nav">
+  <div class="active"><b>⌂</b>Ana Sayfa</div>
+  <div><b>▦</b>Kategoriler</div>
+  <div><b>🛒</b>Sepetim</div>
+  <div><b>☰</b>Siparişler</div>
+  <div><b>♙</b>Hesabım</div>
+</div>
+
+</body>
+</html>
