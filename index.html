@@ -1,312 +1,161 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIGI MARKET</title>
+<section style="padding:20px;">
 
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<div style="
+background:#0b0b12;
+border:1px solid #2d1842;
+border-radius:20px;
+padding:20px;
+margin-bottom:18px;
+box-shadow:0 0 25px rgba(168,85,255,.12);
+">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Rajdhani',sans-serif;
-  background:#030006;
-  color:#fff;
-  padding-bottom:85px;
-}
-.top{
-  height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 18px;
-  background:#050008;
-  border-bottom:1px solid #21112f;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-.logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:31px;
-  font-weight:700;
-}
-.logo .bag{
-  width:42px;height:42px;border:2px solid #a855ff;
-  border-radius:10px;display:grid;place-items:center;
-  color:#b96cff;box-shadow:0 0 18px #8b2cff;
-}
-.logo span{color:#a855ff}
-.icon{font-size:30px;color:#fff}
+<h2 style="
+font-size:28px;
+margin-bottom:10px;
+color:#fff;
+">
+🔥 Özel Kampanyalar
+</h2>
 
-.hero{
-  margin:18px;
-  min-height:440px;
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid #2c1742;
-  background:
-    linear-gradient(90deg,#07000d 0%,rgba(20,0,35,.75) 45%,rgba(0,0,0,.35)),
-    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200');
-  background-size:cover;
-  background-position:center;
-  box-shadow:0 0 40px rgba(168,85,255,.25);
-  padding:30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:end;
-}
-.badge{
-  display:inline-block;
-  width:max-content;
-  padding:9px 16px;
-  border:1px solid #8b2cff;
-  border-radius:10px;
-  background:rgba(120,30,255,.18);
-  color:#fff;
-  font-weight:700;
-  margin-bottom:22px;
-}
-.hero h1{
-  font-size:43px;
-  line-height:1;
-  font-weight:700;
-  text-transform:uppercase;
-}
-.hero h1 b{
-  color:#b45cff;
-  text-shadow:0 0 18px #8b2cff;
-}
-.hero p{
-  margin:18px 0 24px;
-  font-size:18px;
-  line-height:1.45;
-  color:#eee;
-}
-.btn{
-  width:100%;
-  height:58px;
-  border:0;
-  border-radius:14px;
-  color:white;
-  font-size:19px;
-  font-weight:700;
-  background:linear-gradient(90deg,#7c2cff,#c05cff);
-  box-shadow:0 0 25px rgba(168,85,255,.55);
-}
+<p style="
+color:#aaa;
+font-size:17px;
+line-height:1.5;
+margin-bottom:18px;
+">
+PUBG UC, Valorant VP ve Robux ürünlerinde kaçırılmayacak indirimler seni bekliyor.
+</p>
 
-.dots{
-  text-align:center;
-  margin-top:18px;
-}
-.dots span{
-  display:inline-block;
-  width:35px;height:7px;
-  border-radius:20px;
-  background:#555;
-  margin:0 5px;
-}
-.dots span:first-child{background:#a855ff}
+<button style="
+width:100%;
+height:55px;
+border:none;
+border-radius:14px;
+background:linear-gradient(90deg,#7b2cff,#c05cff);
+color:white;
+font-size:18px;
+font-weight:700;
+box-shadow:0 0 25px rgba(168,85,255,.4);
+">
+KAMPANYALARI GÖR
+</button>
 
-.features{
-  margin:18px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  background:#08080d;
-  border:1px solid #241334;
-  border-radius:18px;
-  overflow:hidden;
-}
-.f{
-  text-align:center;
-  padding:18px 8px;
-  border-right:1px solid #241334;
-}
-.f:last-child{border-right:0}
-.f .emoji{
-  font-size:31px;
-  color:#b45cff;
-  margin-bottom:8px;
-}
-.f h3{
-  font-size:13px;
-  line-height:1.1;
-}
-.f p{
-  display:none;
-}
-
-.title{
-  margin:28px 18px 12px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.title h2{
-  font-size:27px;
-}
-.title h2::before{
-  content:'🔥 ';
-}
-.title a{
-  color:#b45cff;
-  text-decoration:none;
-  font-weight:700;
-}
-
-.products{
-  display:flex;
-  overflow-x:auto;
-  gap:14px;
-  padding:0 18px 20px;
-  scroll-snap-type:x mandatory;
-}
-.products::-webkit-scrollbar{display:none}
-
-.card{
-  min-width:185px;
-  background:#08080d;
-  border:1px solid #251436;
-  border-radius:16px;
-  overflow:hidden;
-  scroll-snap-align:start;
-  box-shadow:0 0 20px rgba(168,85,255,.14);
-}
-.pic{
-  height:170px;
-  background-size:cover;
-  background-position:center;
-}
-.c1{background-image:url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800')}
-.c2{background-image:url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800')}
-.c3{background-image:url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=800')}
-.c4{background-image:url('https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=800')}
-
-.card-body{padding:14px}
-.card h3{
-  font-size:25px;
-  line-height:1;
-}
-.card small{
-  color:#aaa;
-  font-size:14px;
-}
-.price{
-  margin:10px 0 14px;
-  font-size:28px;
-  color:#37ff6b;
-  font-weight:700;
-  text-shadow:0 0 12px rgba(55,255,107,.35);
-}
-.buy{
-  width:100%;
-  height:45px;
-  border-radius:10px;
-  border:1px solid #9b3cff;
-  background:rgba(120,30,255,.18);
-  color:#fff;
-  font-weight:700;
-  font-size:15px;
-}
-
-.promo{
-  margin:6px 18px 18px;
-  padding:20px;
-  border-radius:18px;
-  background:linear-gradient(90deg,rgba(120,30,255,.2),rgba(0,0,0,.4));
-  border:1px solid #2c1742;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.promo h3{font-size:20px}
-.promo p{color:#aaa}
-.promo button{
-  padding:13px 16px;
-  border:1px solid #a855ff;
-  border-radius:12px;
-  background:#251037;
-  color:white;
-  font-weight:700;
-}
-
-.quick{
-  margin:18px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-.quick-box{
-  padding:20px;
-  border-radius:16px;
-  background:#08080d;
-  border:1px solid #241334;
-}
-.quick-box h3{font-size:20px}
-.quick-box p{color:#aaa}
-
-.nav{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  height:76px;
-  background:#07070b;
-  border-top:1px solid #241334;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  z-index:20;
-}
-.nav div{
-  text-align:center;
-  color:#aaa;
-  font-size:12px;
-}
-.nav .active{
-  color:#b45cff;
-}
-.nav b{
-  display:block;
-  font-size:22px;
-}
-
-@media(max-width:420px){
-  .logo{font-size:27px}
-  .hero{min-height:390px;padding:24px}
-  .hero h1{font-size:36px}
-  .features{grid-template-columns:repeat(4,1fr)}
-  .f{padding:14px 4px}
-  .f h3{font-size:12px}
-  .card{min-width:175px}
-}
-</style>
-</head>
-
-<body>
-
-<div class="top">
-  <div class="icon">☰</div>
-  <div class="logo"><div class="bag">D</div>DIGI <span>MARKET</span></div>
-  <div class="icon">🎧</div>
 </div>
 
-<section class="hero">
-  <div class="badge">EN UYGUN FİYATLAR</div>
-  <h1>Dijital Dünyanın<br><b>En Güvenilir Marketi!</b></h1>
-  <p>PUBG UC, Valorant VP, Robux ve daha fazlası anında teslimat güvencesiyle DIGI MARKET’te!</p>
-  <button class="btn">ALIŞVERİŞE BAŞLA ❯</button>
-  <div class="dots"><span></span><span></span><span></span></div>
-</section>
+<div style="
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-bottom:18px;
+">
 
-<section class="features">
-  <div class="f"><div class="emoji">⚡</div><h3>ANINDA<br>TESLİMAT</h3></div>
-  <div class="f"><div class="emoji">🛡️</div><h3>%100<br>GÜVENLİ</h3></div>
-  <div class="f"><div class="emoji">🎧</div><h3>7/24<br>DESTEK</h3></div>
-  <div class="f"><div class="emoji">⭐</div><h3>MÜŞTERİ<br>MEMNUNİYETİ</h3></div>
-</section>
+<div style="
+background:#0b0b12;
+border:1px solid #2d1842;
+border-radius:18px;
+padding:18px;
+">
 
-<div class="title">
+<div style="font-size:35px;">💬</div>
+
+<h3 style="
+margin-top:12px;
+font-size:22px;
+">
+WhatsApp Destek
+</h3>
+
+<p style="
+color:#aaa;
+margin-top:8px;
+font-size:15px;
+line-height:1.5;
+">
+Sipariş için bize anında yazabilirsiniz.
+</p>
+
+</div>
+
+<div style="
+background:#0b0b12;
+border:1px solid #2d1842;
+border-radius:18px;
+padding:18px;
+">
+
+<div style="font-size:35px;">🎮</div>
+
+<h3 style="
+margin-top:12px;
+font-size:22px;
+">
+Tüm Ürünler
+</h3>
+
+<p style="
+color:#aaa;
+margin-top:8px;
+font-size:15px;
+line-height:1.5;
+">
+Tüm dijital ürünleri keşfet.
+</p>
+
+</div>
+
+</div>
+
+<div style="
+background:#0b0b12;
+border:1px solid #2d1842;
+border-radius:20px;
+padding:22px;
+">
+
+<h2 style="
+font-size:26px;
+margin-bottom:18px;
+">
+⭐ Müşteri Yorumları
+</h2>
+
+<div style="
+background:#12121a;
+padding:15px;
+border-radius:14px;
+margin-bottom:12px;
+">
+
+<b style="font-size:18px;">Ahmet Y.</b>
+
+<p style="
+color:#aaa;
+margin-top:8px;
+line-height:1.5;
+">
+UC satın aldım 2 dakika içinde teslim edildi. Gerçekten çok hızlı.
+</p>
+
+</div>
+
+<div style="
+background:#12121a;
+padding:15px;
+border-radius:14px;
+">
+
+<b style="font-size:18px;">Mehmet K.</b>
+
+<p style="
+color:#aaa;
+margin-top:8px;
+line-height:1.5;
+">
+Fiyatlar piyasaya göre baya iyi. Güvenilir site olmuş.
+</p>
+
+</div>
+
+</div>
+
+</section>
