@@ -3,95 +3,236 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAMEZONE</title>
+<title>Arabax</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#070712;color:white;padding-bottom:80px}
-header{padding:18px;display:flex;justify-content:space-between;align-items:center;background:#0d0d1f;position:sticky;top:0;z-index:10}
-.logo{font-size:28px;font-weight:900;color:#7c5cff}
-.hero{margin:18px;padding:28px;border-radius:24px;background:linear-gradient(135deg,#7c5cff,#111);box-shadow:0 0 35px #7c5cff55}
-.hero h1{font-size:38px;margin-bottom:12px}
-.hero p{color:#ddd;font-size:16px}
-.btn{margin-top:20px;width:100%;height:55px;border:0;border-radius:16px;background:white;color:#111;font-size:18px;font-weight:800}
-.title{padding:10px 18px;font-size:24px;font-weight:900}
-.games{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:18px}
-.card{background:#111126;border:1px solid #29295a;border-radius:20px;overflow:hidden}
-.pic{height:130px;display:grid;place-items:center;font-size:55px;background:#18183a}
-.card div:last-child{padding:14px}
-.card h3{font-size:20px}
-.card p{font-size:13px;color:#aaa;margin:6px 0 12px}
-.play{width:100%;height:42px;border:0;border-radius:12px;background:#7c5cff;color:white;font-weight:800}
-.ad{margin:18px;padding:20px;border-radius:18px;background:#15152d;border:1px dashed #7c5cff;text-align:center;color:#aaa}
-.nav{position:fixed;bottom:0;left:0;right:0;height:70px;background:#0d0d1f;border-top:1px solid #29295a;display:flex;justify-content:space-around;align-items:center}
-.nav div{text-align:center;color:#aaa;font-size:12px}
-.nav .active{color:#7c5cff}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:white;
+font-family:Arial;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#111;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#d4af37;
+}
+
+.btn{
+background:#d4af37;
+color:black;
+padding:12px 20px;
+border:none;
+border-radius:12px;
+font-weight:bold;
+}
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(to bottom,#111,#050505);
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:600px;
+color:#ccc;
+margin-bottom:25px;
+}
+
+.search{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.search input{
+padding:15px;
+border-radius:12px;
+border:none;
+width:250px;
+}
+
+.cars{
+padding:40px 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #222;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-body{
+padding:20px;
+}
+
+.price{
+color:#d4af37;
+font-size:28px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.title{
+font-size:22px;
+margin-bottom:15px;
+}
+
+.info{
+color:#bbb;
+margin-bottom:15px;
+line-height:1.7;
+}
+
+.whatsapp{
+display:block;
+text-align:center;
+background:#1db954;
+padding:12px;
+border-radius:12px;
+font-weight:bold;
+text-decoration:none;
+color:white;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+border-top:1px solid #222;
+margin-top:50px;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">GAMEZONE</div>
-<div>☰</div>
+<div class="logo">Arabax</div>
+
+<button class="btn">
+İlan Ver
+</button>
 </header>
 
 <section class="hero">
-<h1>Mobil Oyun Merkezi</h1>
-<p>En eğlenceli mini oyunları hemen oyna. Telefona uyumlu, hızlı ve basit oyun sitesi.</p>
-<button class="btn" onclick="location.href='#oyunlar'">OYUNLARA BAŞLA</button>
-</section>
 
-<div class="ad">Reklam Alanı - Google AdSense buraya eklenir</div>
+<h1>
+Premium Araç Pazarı
+</h1>
 
-<div class="title" id="oyunlar">🔥 Popüler Oyunlar</div>
+<p>
+Arabax ile aracını hızlı, güvenli ve premium şekilde satışa çıkar.
+</p>
 
-<section class="games">
-
-<div class="card">
-<div class="pic">🚗</div>
-<div>
-<h3>Araba Yarışı</h3>
-<p>Hızlı refleks oyunu</p>
-<button class="play" onclick="alert('Oyun yakında aktif!')">OYNA</button>
-</div>
-</div>
-
-<div class="card">
-<div class="pic">🔫</div>
-<div>
-<h3>Hedef Vur</h3>
-<p>Nişan alma oyunu</p>
-<button class="play" onclick="alert('Oyun yakında aktif!')">OYNA</button>
-</div>
-</div>
-
-<div class="card">
-<div class="pic">🧱</div>
-<div>
-<h3>Blok Kırma</h3>
-<p>Klasik arcade oyun</p>
-<button class="play" onclick="alert('Oyun yakında aktif!')">OYNA</button>
-</div>
-</div>
-
-<div class="card">
-<div class="pic">🐍</div>
-<div>
-<h3>Yılan Oyunu</h3>
-<p>Efsane klasik</p>
-<button class="play" onclick="alert('Oyun yakında aktif!')">OYNA</button>
-</div>
+<div class="search">
+<input type="text" placeholder="Marka / Model">
+<input type="text" placeholder="Şehir">
+<button class="btn">Ara</button>
 </div>
 
 </section>
 
-<div class="ad">Alt Reklam Alanı</div>
+<section class="cars">
 
-<div class="nav">
-<div class="active">🏠<br>Ana Sayfa</div>
-<div>🎮<br>Oyunlar</div>
-<div>🔥<br>Popüler</div>
-<div>👤<br>Profil</div>
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200">
+
+<div class="card-body">
+
+<div class="price">
+₺1.245.000
 </div>
+
+<div class="title">
+Volkswagen Golf 7.5
+</div>
+
+<div class="info">
+📍 Diyarbakır<br>
+📅 2018<br>
+🛣 142.000 KM
+</div>
+
+<a class="whatsapp" href="#">
+WhatsApp ile Ara
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200">
+
+<div class="card-body">
+
+<div class="price">
+₺965.000
+</div>
+
+<div class="title">
+Toyota Corolla Hybrid
+</div>
+
+<div class="info">
+📍 İstanbul<br>
+📅 2020<br>
+🛣 118.000 KM
+</div>
+
+<a class="whatsapp" href="#">
+WhatsApp ile Ara
+</a>
+
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Arabax
+</footer>
 
 </body>
 </html>
