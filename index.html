@@ -2,86 +2,411 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dijital Market</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f5f7fb;color:#111}
-.top{background:#fff;height:38px;display:flex;justify-content:space-around;align-items:center;font-size:12px;border-bottom:1px solid #eee}
-.header{height:72px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid #eee;position:sticky;top:0;z-index:9}
-.logo{font-weight:900;font-size:23px;color:#1263ff}.logo span{color:#111}
-nav a{margin:0 12px;font-size:13px;font-weight:700}
-.cart{font-size:25px}
-.hero{max-width:1180px;margin:24px auto;background:linear-gradient(120deg,#fff,#eaf3ff);border-radius:18px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
-.hero h1{font-size:44px;line-height:1.08}.hero b{color:#1263ff}
-.hero p{margin-top:15px;color:#555;font-size:17px}
-.badges{display:flex;gap:14px;margin-top:25px}.badge{background:white;padding:14px;border-radius:13px;box-shadow:0 8px 25px #d9e0ec;font-size:13px}
-.heroimg{display:flex;gap:12px;justify-content:center}
-.heroimg div{background:#061326;color:white;width:115px;height:150px;border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;font-weight:900;box-shadow:0 15px 30px #ccd6e6}
-.cats{max-width:1180px;margin:0 auto 25px;background:#fff;border-radius:15px;border:1px solid #e3e7ef;display:flex;justify-content:space-around;padding:18px;font-size:14px}
-.section{max-width:1180px;margin:auto}
-.section h2{margin:22px 0}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
-.product{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e1e6ef;box-shadow:0 8px 20px #e4e9f2}
-.img{height:165px;background:#071426;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:27px;font-weight:900}
-.info{padding:14px}
-.info h3{font-size:15px}.info p{font-size:13px;color:#666;margin:6px 0}
-.price{color:#1263ff;font-size:20px;font-weight:900;margin:10px 0}
-button{width:100%;background:#1263ff;color:#fff;border:0;border-radius:8px;padding:11px;font-weight:800}
-.features{max-width:1180px;margin:35px auto;background:#fff;border:1px solid #e3e7ef;border-radius:15px;padding:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.footer{background:#fff;margin-top:30px;padding:35px;display:flex;justify-content:space-around;border-top:1px solid #ddd;font-size:14px}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#111;
+}
+
+.topbar{
+height:40px;
+background:#fff;
+display:flex;
+justify-content:space-around;
+align-items:center;
+font-size:12px;
+border-bottom:1px solid #eee;
+}
+
+.header{
+height:75px;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 25px;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+color:#1263ff;
+}
+
+.logo span{
+color:#111;
+}
+
+nav{
+display:flex;
+gap:18px;
+font-size:14px;
+font-weight:700;
+}
+
+.hero{
+max-width:1180px;
+margin:25px auto;
+background:linear-gradient(120deg,#ffffff,#edf4ff);
+border-radius:20px;
+padding:40px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+align-items:center;
+}
+
+.hero h1{
+font-size:48px;
+line-height:1.1;
+}
+
+.hero h1 span{
+color:#1263ff;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+color:#555;
+}
+
+.hero-right{
+display:flex;
+gap:15px;
+justify-content:center;
+}
+
+.hero-card{
+width:120px;
+height:170px;
+border-radius:20px;
+overflow:hidden;
+background:#061326;
+box-shadow:0 15px 30px #dbe4f2;
+}
+
+.hero-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.categories{
+max-width:1180px;
+margin:auto;
+background:#fff;
+border-radius:15px;
+padding:18px;
+display:flex;
+justify-content:space-around;
+border:1px solid #e5e7eb;
+}
+
+.products{
+max-width:1180px;
+margin:30px auto;
+}
+
+.products h2{
+margin-bottom:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+}
+
+.card{
+background:#fff;
+border-radius:16px;
+overflow:hidden;
+border:1px solid #e5e7eb;
+box-shadow:0 8px 25px #e7ebf3;
+}
+
+.card-image{
+height:220px;
+overflow:hidden;
+background:#071326;
+}
+
+.card-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card-content h3{
+font-size:17px;
+margin-bottom:6px;
+}
+
+.card-content p{
+font-size:13px;
+color:#666;
+}
+
+.price{
+font-size:24px;
+font-weight:900;
+color:#1263ff;
+margin:12px 0;
+}
+
+.buy-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#1263ff;
+color:white;
+font-weight:800;
+font-size:15px;
+}
+
+.footer{
+margin-top:40px;
+background:#fff;
+padding:30px;
+text-align:center;
+border-top:1px solid #ddd;
+color:#666;
+}
+
 @media(max-width:800px){
-.header{padding:0 16px}.logo{font-size:20px}nav{display:none}
-.hero{grid-template-columns:1fr;margin:12px;padding:24px}
-.hero h1{font-size:34px}.badges{flex-wrap:wrap}.heroimg{flex-wrap:wrap}
-.heroimg div{width:95px;height:110px;font-size:16px}
-.cats{margin:12px;overflow:auto;gap:22px;justify-content:flex-start}
-.grid{grid-template-columns:repeat(2,1fr);gap:14px;padding:0 12px}
-.img{height:135px;font-size:22px}.features{grid-template-columns:1fr;margin:25px 12px}
-.footer{display:block}.footer div{margin-bottom:18px}
+
+.hero{
+grid-template-columns:1fr;
+padding:25px;
+margin:12px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero-right{
+flex-wrap:wrap;
+}
+
+.hero-card{
+width:90px;
+height:120px;
+}
+
+.categories{
+margin:12px;
+overflow:auto;
+gap:20px;
+justify-content:flex-start;
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+padding:0 12px;
+gap:14px;
+}
+
+.card-image{
+height:150px;
+}
+
+nav{
+display:none;
+}
+
 }
 </style>
 </head>
+
 <body>
 
-<div class="top">
-<div>🚚 Hızlı Teslimat</div><div>🛡️ %100 Güvenli Ödeme</div><div>🎧 7/24 Destek</div>
+<div class="topbar">
+<div>🚚 Hızlı Teslimat</div>
+<div>🛡️ Güvenli Ödeme</div>
+<div>🎧 7/24 Destek</div>
 </div>
 
 <div class="header">
 <div class="logo">DİJİTAL <span>MARKET</span></div>
-<nav><a>Ana Sayfa</a><a>Ürünler</a><a>Kategoriler</a><a>Hakkımızda</a><a>İletişim</a></nav>
-<div class="cart">🛒</div>
+
+<nav>
+<div>Ana Sayfa</div>
+<div>Ürünler</div>
+<div>Kategoriler</div>
+<div>İletişim</div>
+</nav>
+
+<div>🛒</div>
 </div>
 
 <section class="hero">
+
 <div>
-<h1>Dijital Ürünlerde <b>Güvenilir Alışveriş</b></h1>
-<p>Oyun, eğlence ve dijital ürünlerde uygun fiyat ve anında teslimat.</p>
-<div class="badges">
-<div class="badge">⚡ Anında Teslimat</div>
-<div class="badge">🛡️ Güvenli Ödeme</div>
-<div class="badge">🎧 7/24 Destek</div>
+<h1>Dijital Ürünlerde <span>En Uygun Fiyatlar</span></h1>
+
+<p>
+Google Play, PUBG UC, Steam Wallet, Netflix ve daha fazlası.
+</p>
 </div>
+
+<div class="hero-right">
+
+<div class="hero-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg">
 </div>
-<div class="heroimg">
-<div>Google<br>Play</div><div>STEAM</div><div>NETFLIX</div><div>PUBG</div>
+
+<div class="hero-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg">
 </div>
+
+<div class="hero-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+</div>
+
+<div class="hero-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/4/44/PUBG_Mobile_logo.png">
+</div>
+
+</div>
+
 </section>
 
-<div class="cats">
-<div>🎮 Oyun Kodları</div><div>Steam Cüzdan</div><div>Google Play</div><div>Netflix</div><div>Spotify</div><div>Discord</div>
+<div class="categories">
+<div>🎮 Oyun Kodları</div>
+<div>Steam</div>
+<div>Google Play</div>
+<div>Netflix</div>
+<div>Spotify</div>
+<div>Discord</div>
 </div>
 
-<section class="section">
+<section class="products">
+
 <h2>Popüler Ürünler</h2>
+
 <div class="grid">
 
-<div class="product"><div class="img">Google<br>Play</div><div class="info"><h3>Google Play 100 TL</h3><p>Anında Teslimat</p><div class="price">100,00 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">PUBG<br>UC</div><div class="info"><h3>PUBG Mobile 325 UC</h3><p>Anında Teslimat</p><div class="price">99,90 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">VALORANT</div><div class="info"><h3>Valorant 475 VP</h3><p>Anında Teslimat</p><div class="price">99,90 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">STEAM</div><div class="info"><h3>Steam Wallet 10 USD</h3><p>Anında Teslimat</p><div class="price">299,90 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">NETFLIX</div><div class="info"><h3>Netflix 1 Aylık</h3><p>Anında Teslimat</p><div class="price">79,90 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">SPOTIFY</div><div class="info"><h3>Spotify Premium 1 Ay</h3><p>Anında Teslimat</p><div class="price">59,90 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">DISCORD</div><div class="info"><h3>Discord Nitro 1 Ay</h3><p>Anında Teslimat</p><div class="price">59,90 TL</div><button>🛒 Satın Al</button></div></div>
-<div class="product"><div class="img">LOL RP</div><div class="info"><h3>League of Legends 575 RP</h3
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg">
+</div>
+<div class="card-content">
+<h3>Google Play 100 TL</h3>
+<p>Anında Teslimat</p>
+<div class="price">100,00 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/en/4/44/PUBG_Mobile_logo.png">
+</div>
+<div class="card-content">
+<h3>PUBG Mobile 325 UC</h3>
+<p>Anında Teslimat</p>
+<div class="price">99,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg">
+</div>
+<div class="card-content">
+<h3>Valorant 475 VP</h3>
+<p>Anında Teslimat</p>
+<div class="price">99,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg">
+</div>
+<div class="card-content">
+<h3>Steam Wallet 10 USD</h3>
+<p>Anında Teslimat</p>
+<div class="price">299,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+</div>
+<div class="card-content">
+<h3>Netflix 1 Aylık</h3>
+<p>Anında Teslimat</p>
+<div class="price">79,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
+</div>
+<div class="card-content">
+<h3>Spotify Premium</h3>
+<p>Anında Teslimat</p>
+<div class="price">59,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg">
+</div>
+<div class="card-content">
+<h3>Discord Nitro</h3>
+<p>Anında Teslimat</p>
+<div class="price">59,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-image">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/League_of_Legends_2019_vector.svg">
+</div>
+<div class="card-content">
+<h3>League of Legends RP</h3>
+<p>Anında Teslimat</p>
+<div class="price">99,90 TL</div>
+<button class="buy-btn">🛒 Satın Al</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+© 2026 Dijital Market - Tüm hakları saklıdır.
+</div>
+
+</body>
+</html>
