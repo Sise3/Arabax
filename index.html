@@ -3,236 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arabax</title>
-
+<title>Secure Payment</title>
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#050505;
-color:white;
-font-family:Arial;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-background:#111;
-position:sticky;
-top:0;
-}
-
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#d4af37;
-}
-
-.btn{
-background:#d4af37;
-color:black;
-padding:12px 20px;
-border:none;
-border-radius:12px;
-font-weight:bold;
-}
-
-.hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(to bottom,#111,#050505);
-}
-
-.hero h1{
-font-size:55px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:600px;
-color:#ccc;
-margin-bottom:25px;
-}
-
-.search{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.search input{
-padding:15px;
-border-radius:12px;
-border:none;
-width:250px;
-}
-
-.cars{
-padding:40px 20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111;
-border-radius:20px;
-overflow:hidden;
-border:1px solid #222;
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.card-body{
-padding:20px;
-}
-
-.price{
-color:#d4af37;
-font-size:28px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.title{
-font-size:22px;
-margin-bottom:15px;
-}
-
-.info{
-color:#bbb;
-margin-bottom:15px;
-line-height:1.7;
-}
-
-.whatsapp{
-display:block;
-text-align:center;
-background:#1db954;
-padding:12px;
-border-radius:12px;
-font-weight:bold;
-text-decoration:none;
-color:white;
-}
-
-footer{
-text-align:center;
-padding:30px;
-color:#777;
-border-top:1px solid #222;
-margin-top:50px;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;background:radial-gradient(circle at top,#072b70,#020617 55%,#000);color:white;display:flex;justify-content:center;align-items:center;padding:25px}
+.card{width:100%;max-width:430px;text-align:center}
+.icon{width:120px;height:120px;margin:0 auto 20px;border:2px solid #0284ff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:55px;box-shadow:0 0 45px #006cff}
+h1{font-size:38px;margin-bottom:8px}
+.sub{color:#aab4c8;font-size:19px;margin-bottom:28px}
+.pay{display:flex;align-items:center;gap:22px;text-decoration:none;color:white;background:rgba(2,20,60,.72);border:1px solid #0077ff;border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 0 22px rgba(0,119,255,.35)}
+.money{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:38px;background:#031b38;border:1px solid #00d4ff;color:#43f5d6}
+.pay strong{font-size:34px;display:block;text-align:left}
+.pay span{color:#aab4c8;font-size:18px;display:block;text-align:left}
+.arrow{margin-left:auto;font-size:36px;color:#1387ff}
+.footer{margin-top:35px;color:#b8c2d6}
+.footer .shield{font-size:42px;color:#147dff}
+.note{font-size:14px;color:#7b8498;margin-top:8px}
 </style>
 </head>
-
 <body>
 
-<header>
-<div class="logo">Arabax</div>
-
-<button class="btn">
-İlan Ver
-</button>
-</header>
-
-<section class="hero">
-
-<h1>
-Premium Araç Pazarı
-</h1>
-
-<p>
-Arabax ile aracını hızlı, güvenli ve premium şekilde satışa çıkar.
-</p>
-
-<div class="search">
-<input type="text" placeholder="Marka / Model">
-<input type="text" placeholder="Şehir">
-<button class="btn">Ara</button>
-</div>
-
-</section>
-
-<section class="cars">
-
 <div class="card">
+  <div class="icon">💳</div>
+  <h1>Secure Payment</h1>
+  <div class="sub">Choose payment amount</div>
 
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200">
+  <a class="pay" href="#">
+    <div class="money">$</div>
+    <div><strong>50$</strong><span>Payment</span></div>
+    <div class="arrow">›</div>
+  </a>
 
-<div class="card-body">
+  <a class="pay" href="#">
+    <div class="money">$</div>
+    <div><strong>100$</strong><span>Payment</span></div>
+    <div class="arrow">›</div>
+  </a>
 
-<div class="price">
-₺1.245.000
+  <a class="pay" href="#">
+    <div class="money">$</div>
+    <div><strong>200$</strong><span>Payment</span></div>
+    <div class="arrow">›</div>
+  </a>
+
+  <a class="pay" href="#">
+    <div class="money">$</div>
+    <div><strong>1000$</strong><span>Payment</span></div>
+    <div class="arrow">›</div>
+  </a>
+
+  <div class="footer">
+    <div class="shield">🛡️</div>
+    <b>Secure checkout</b>
+    <div class="note">Payment opens after real payment links are connected.</div>
+  </div>
 </div>
-
-<div class="title">
-Volkswagen Golf 7.5
-</div>
-
-<div class="info">
-📍 Diyarbakır<br>
-📅 2018<br>
-🛣 142.000 KM
-</div>
-
-<a class="whatsapp" href="#">
-WhatsApp ile Ara
-</a>
-
-</div>
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200">
-
-<div class="card-body">
-
-<div class="price">
-₺965.000
-</div>
-
-<div class="title">
-Toyota Corolla Hybrid
-</div>
-
-<div class="info">
-📍 İstanbul<br>
-📅 2020<br>
-🛣 118.000 KM
-</div>
-
-<a class="whatsapp" href="#">
-WhatsApp ile Ara
-</a>
-
-</div>
-</div>
-
-</section>
-
-<footer>
-© 2026 Arabax
-</footer>
 
 </body>
 </html>
