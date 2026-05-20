@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arabax</title>
 
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+}
+
+header{
+background:#111;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#f5c542;
+}
+
+.btn{
+background:#f5c542;
+color:black;
+padding:12px 20px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.hero{
+height:420px;
+background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1400') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+background:rgba(0,0,0,0.6);
+padding:20px;
+border-radius:20px;
+}
+
+.section{
+padding:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.card{
+background:#1b1b1b;
+border-radius:18px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:150px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.price{
+color:#f5c542;
+font-size:22px;
+font-weight:bold;
+}
+
+footer{
+padding:20px;
+text-align:center;
+background:#111;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">ARABAX</div>
+<a class="btn">İlan Ver</a>
+</header>
+
+<section class="hero">
+<h1>Türkiye'nin Yeni Araç Pazarı</h1>
+</section>
+
+<section class="section">
+<h2>Popüler İlanlar</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200">
+<div class="card-content">
+<h3>BMW 520i</h3>
+<p>2021 • Otomatik • 82.000 KM</p>
+<div class="price">2.185.000 TL</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
+<div class="card-content">
+<h3>Mercedes C200</h3>
+<p>2020 • AMG • 64.000 KM</p>
+<div class="price">2.450.000 TL</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+Arabax © 2026
+</footer>
+
+</body>
+</html>
