@@ -1,160 +1,311 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Arabax - Araç Alım Satım</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arabax</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#070707;color:#fff}
-a{text-decoration:none;color:inherit}
-.header{position:sticky;top:0;z-index:10;background:#0b0b0b;border-bottom:1px solid #222;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:26px;font-weight:900;color:#f4c542;letter-spacing:1px}
-.nav{display:flex;gap:10px;align-items:center}
-.phone{font-weight:800;color:#fff;font-size:13px}
-.btn{background:#f4c542;color:#111;padding:10px 15px;border-radius:10px;font-weight:900;border:none}
+body{
+margin:0;
+font-family:Arial;
+background:#050505;
+color:white;
+}
 
-.hero{min-height:560px;background:linear-gradient(90deg,#050505 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.20)),url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=1600') center/cover;display:flex;align-items:center;padding:30px 18px}
-.hero-box{max-width:850px}
-.badge{display:inline-block;background:rgba(244,197,66,.12);border:1px solid #f4c542;color:#f4c542;padding:8px 12px;border-radius:999px;font-weight:800;margin-bottom:18px}
-h1{font-size:48px;line-height:1.05;margin:0 0 15px}
-.hero p{font-size:18px;color:#ddd;max-width:650px}
-.search{margin-top:25px;background:rgba(20,20,20,.92);border:1px solid #333;border-radius:18px;padding:16px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px}
-.search input,.search select{background:#111;border:1px solid #333;color:white;border-radius:12px;padding:13px}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#0d0d0d;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+}
 
-.section{padding:26px 18px;max-width:1200px;margin:auto}
-.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.title h2{margin:0;font-size:28px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#151515;border:1px solid #242424;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.35)}
-.card img{width:100%;height:210px;object-fit:cover;display:block}
-.card-body{padding:16px}
-.card h3{margin:0 0 8px;font-size:21px}
-.meta{color:#bbb;font-size:14px;line-height:1.7}
-.price{font-size:24px;font-weight:900;color:#f4c542;margin:12px 0}
-.actions{display:flex;gap:8px}
-.outline{border:1px solid #f4c542;color:#f4c542;background:transparent;padding:10px;border-radius:10px;font-weight:800;flex:1;text-align:center}
-.gold{background:#f4c542;color:#111;padding:10px;border-radius:10px;font-weight:900;flex:1;text-align:center}
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#f5c542;
+}
 
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.feature{background:#111;border:1px solid #242424;border-radius:18px;padding:18px}
-.feature b{color:#f4c542;font-size:18px}
-.feature p{color:#bbb;font-size:14px}
+.btn{
+background:#f5c542;
+color:black;
+padding:12px 18px;
+border-radius:12px;
+font-weight:bold;
+text-decoration:none;
+}
 
-.auction{background:linear-gradient(135deg,#161616,#050505);border:1px solid #2b2b2b;border-radius:24px;padding:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center}
-.auction h2{font-size:34px;margin:0 0 10px}
-.auction p{color:#ccc}
-.auction-box{background:#0b0b0b;border:1px solid #333;border-radius:18px;padding:18px}
-.live{color:#ff4d4d;font-weight:900}
+.hero{
+height:550px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-.footer{background:#050505;border-top:1px solid #222;padding:25px;text-align:center;color:#aaa;margin-top:30px}
-.whatsapp{position:fixed;right:16px;bottom:18px;background:#25d366;color:#fff;padding:14px 17px;border-radius:999px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.hero h1{
+font-size:55px;
+max-width:800px;
+}
 
-@media(max-width:850px){
-h1{font-size:36px}
-.search{grid-template-columns:1fr}
-.grid{grid-template-columns:1fr}
-.features{grid-template-columns:1fr 1fr}
-.auction{grid-template-columns:1fr}
-.hero{min-height:520px}
-.phone{display:none}
+.section{
+padding:30px 20px;
+}
+
+.section h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #222;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin:0;
+font-size:24px;
+}
+
+.info{
+color:#bbb;
+margin:10px 0;
+line-height:1.7;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+color:#f5c542;
+margin:15px 0;
+}
+
+.actions{
+display:flex;
+gap:10px;
+}
+
+.actions a{
+flex:1;
+text-align:center;
+padding:12px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.dark{
+background:#1f1f1f;
+color:white;
+}
+
+.gold{
+background:#f5c542;
+color:black;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.feature{
+background:#111;
+padding:20px;
+border-radius:18px;
+border:1px solid #222;
+}
+
+.feature h3{
+color:#f5c542;
+}
+
+.auction{
+background:#111;
+padding:30px;
+border-radius:25px;
+margin-top:30px;
+border:1px solid #222;
+}
+
+.auction h2{
+color:#f5c542;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#0d0d0d;
+margin-top:40px;
+border-top:1px solid #222;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25d366;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+}
+
+@media(max-width:700px){
+
+.hero{
+height:450px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
 }
 </style>
 </head>
+
 <body>
 
-<header class="header">
-  <div class="logo">ARABAX</div>
-  <div class="nav">
-    <span class="phone">0532 000 00 00</span>
-    <a class="btn" href="#ilanlar">İlan Ver</a>
-  </div>
+<header>
+<div class="logo">ARABAX</div>
+<a class="btn">İlan Ver</a>
 </header>
 
 <section class="hero">
-  <div class="hero-box">
-    <div class="badge">Premium araç pazarı</div>
-    <h1>Arabax ile aracını hızlı, güvenli ve değerinde sat.</h1>
-    <p>Sahibinden tarzı modern araç ilanları, güvenli iletişim, canlı destek ve yakında ihale sistemi.</p>
-
-    <div class="search">
-      <select><option>Marka seç</option><option>BMW</option><option>Mercedes</option><option>Volkswagen</option></select>
-      <select><option>Şehir</option><option>Diyarbakır</option><option>İstanbul</option><option>Ankara</option></select>
-      <input placeholder="Model, yıl veya anahtar kelime" />
-      <button class="btn">Ara</button>
-    </div>
-  </div>
+<h1>Türkiye'nin Premium Araç Pazarı</h1>
 </section>
 
 <section class="section">
-  <div class="features">
-    <div class="feature"><b>Güvenli İlan</b><p>Satıcı ve alıcı için net bilgi.</p></div>
-    <div class="feature"><b>WhatsApp İletişim</b><p>Tek dokunuşla hızlı görüşme.</p></div>
-    <div class="feature"><b>İhale Sistemi</b><p>Yakında teklif usulü satış.</p></div>
-    <div class="feature"><b>Ekspertiz Bilgisi</b><p>Hasar, km ve detay alanları.</p></div>
-  </div>
+
+<h2>Öne Çıkan İlanlar</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200">
+<div class="card-content">
+<h3>BMW 520i M Sport</h3>
+<div class="info">
+2021 • Otomatik • 82.000 KM<br>
+Diyarbakır / Kayapınar
+</div>
+<div class="price">2.185.000 TL</div>
+
+<div class="actions">
+<a class="dark">Detay</a>
+<a class="gold">Ara</a>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1200">
+<div class="card-content">
+<h3>Mercedes C200 AMG</h3>
+<div class="info">
+2020 • Benzin • 64.000 KM<br>
+İstanbul / Ataşehir
+</div>
+<div class="price">2.450.000 TL</div>
+
+<div class="actions">
+<a class="dark">Detay</a>
+<a class="gold">Ara</a>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
+<div class="card-content">
+<h3>Volkswagen Golf 7.5</h3>
+<div class="info">
+2018 • DSG • Dizel • 143.000 KM<br>
+Mersin / Yenişehir
+</div>
+<div class="price">1.185.000 TL</div>
+
+<div class="actions">
+<a class="dark">Detay</a>
+<a class="gold">Ara</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<h3>Güvenli Ticaret</h3>
+<p>Alıcı ve satıcı için güvenli sistem.</p>
+</div>
+
+<div class="feature">
+<h3>Canlı Destek</h3>
+<p>Hızlı WhatsApp iletişimi.</p>
+</div>
+
+<div class="feature">
+<h3>İhale Sistemi</h3>
+<p>Yakında canlı teklif sistemi.</p>
+</div>
+
+<div class="feature">
+<h3>Premium İlan</h3>
+<p>Öne çıkan profesyonel araç vitrinleri.</p>
+</div>
+
+</div>
+
+<div class="auction">
+<h2>Arabax İhale Sistemi</h2>
+<p>
+Yakında araçlara canlı teklif verilebilecek premium ihale sistemi aktif olacak.
+</p>
+</div>
+
 </section>
 
-<section class="section" id="ilanlar">
-  <div class="title">
-    <h2>Öne Çıkan İlanlar</h2>
-  </div>
+<a class="whatsapp">WhatsApp</a>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200">
-      <div class="card-body">
-        <h3>BMW 520i M Sport</h3>
-        <div class="meta">2021 • Otomatik • Benzin • 82.000 KM<br>Diyarbakır / Kayapınar</div>
-        <div class="price">2.185.000 TL</div>
-        <div class="actions"><a class="outline">Detay</a><a class="gold">Ara</a></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1200">
-      <div class="card-body">
-        <h3>Mercedes C200 AMG</h3>
-        <div class="meta">2020 • Otomatik • Benzin • 64.000 KM<br>İstanbul / Ataşehir</div>
-        <div class="price">2.450.000 TL</div>
-        <div class="actions"><a class="outline">Detay</a><a class="gold">Ara</a></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200">
-      <div class="card-body">
-        <h3>Volkswagen Golf 7.5</h3>
-        <div class="meta">2018 • DSG • Dizel • 143.000 KM<br>Mersin / Yenişehir</div>
-        <div class="price">1.185.000 TL</div>
-        <div class="actions"><a class="outline">Detay</a><a class="gold">Ara</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="auction">
-    <div>
-      <div class="badge">Yeni özellik</div>
-      <h2>Arabax İhale Sistemi</h2>
-      <p>Aracını ilana koy, alıcılar teklif versin. En yüksek teklif ve hızlı satış için premium sistem.</p>
-      <a class="btn">İhaleye Katıl</a>
-    </div>
-    <div class="auction-box">
-      <p class="live">● Canlı Teklif</p>
-      <h3>2019 Toyota Corolla Hybrid</h3>
-      <p>Başlangıç: 980.000 TL</p>
-      <h2 style="color:#f4c542">1.045.000 TL</h2>
-    </div>
-  </div>
-</section>
-
-<a class="whatsapp" href="https://wa.me/905320000000">WhatsApp</a>
-
-<footer class="footer">
-  <b>ARABAX</b><br>
-  Araç alım satım platformu © 2026
+<footer>
+Arabax © 2026
 </footer>
 
 </body>
